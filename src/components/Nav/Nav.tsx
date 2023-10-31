@@ -5,6 +5,7 @@ import { AppContext } from '../Context/AppContext';
 import { BurgerBtn } from '../BurgerBtn/BurgerBtn';
 import { NavBar } from '../NavBar/NavBar';
 import { SocialsBox } from '../SocialsBox/SocialsBox';
+import { MobileMenu } from '../MobileMenu/MobileMenu';
 
 export const Nav = () => {
 	const { isMobile } = useContext(AppContext)!;
@@ -29,6 +30,8 @@ export const Nav = () => {
 					]
 				)}
 			</div>
+
+			{mobileMenuShown && <MobileMenu setMenuShown={setMobileMenuSHown}/>}
 		</nav>
 	);
 };
