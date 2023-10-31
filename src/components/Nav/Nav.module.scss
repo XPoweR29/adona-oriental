@@ -1,0 +1,30 @@
+@import '../../sass/mixins';
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem 0;
+
+    .wrapper {
+        @include wrapper;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo img {
+        height: 70px;
+    }
+
+    &__navBar {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    &__burgerBtn {
+        margin-left: auto;
+    }
+}

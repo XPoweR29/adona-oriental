@@ -1,0 +1,18 @@
+@import '../../sass/colors';
+
+.socialsBox {
+    display: flex;
+    gap: 1rem;
+    font-size: 3rem;
+
+    a {
+        scale: 1;
+        color: whitesmoke;
+        transition: scale .3s, color .3s;
+
+        &:hover {
+            scale: 1.1;
+            color: $main-color;
+        }
+    }
+}

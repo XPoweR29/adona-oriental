@@ -1,0 +1,35 @@
+@import '../../sass/colors';
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    
+    &__link {
+        position: relative;
+        font-size: 1.8rem;
+        color: whitesmoke;
+        transition: color .3s;
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            width: 0;
+            background-color: $main-color;
+            transition: width 0.3s;
+        }
+        
+        &:hover {
+            color: $main-color;
+
+            &::before{
+                width: 100%;
+            }
+        }
+    }
+}
