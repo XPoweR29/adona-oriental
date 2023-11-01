@@ -19,7 +19,7 @@ export const MobileMenu = ({setMenuShown}: Props) => {
 		<div className={styles.mobileMenu}>
 			{menuLinks.map((link, index) => (
 				<a 
-					className={styles.mobileMenu__link} 
+					className={styles.mobileMenu__link}   
 					href={link.href} 
 					key={index}
 					style={{animationDelay: `${index*0.1}s`}}
