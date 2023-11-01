@@ -1,11 +1,61 @@
 import styles from './HomeSection.module.scss';
+import { AiOutlineClockCircle } from 'react-icons/ai';
+import { FaLocationDot } from 'react-icons/fa6';
+import { IoIosArrowDown } from 'react-icons/io';
+import { SocialsBox } from '../SocialsBox/SocialsBox';
+import { RefObject, useEffect, useRef } from 'react';
 
 export const HomeSection = () => {
-    return (
-        <section className={styles.home} id="home">
-            <div className={styles.wrapper}>
-                <h1 className={styles.home__title}>Z nami odkryjesz orientalne smaki Azji</h1>
-            </div>
-        </section>
-    );
-}
+	const cta = useRef(null) as RefObject<HTMLAnchorElement>;
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			cta.current?.classList.add(`${styles.animate}`);
+
+			setTimeout(() => {
+				cta.current?.classList.remove(`${styles.animate}`);
+			}, 1000);
+		}, 5000);
+
+		return () => clearInterval(interval);
+	}, []);
+
+	return (
+		<section className={styles.home} id='home'>
+			<div className={styles.wrapper}>
+				<h1 className={styles.home__title}>
+					Z nami odkryjesz orientalne smaki <span>Azji</span>
+				</h1>
+
+				<div className={styles.home__hours}>
+					<AiOutlineClockCircle />
+					<span>10:00 - 22:00</span>
+				</div>
+
+				<div className={styles.home__locations}>
+					<div className={styles.location}>
+						<FaLocationDot />
+						<span>Bielsko-Biała</span>
+					</div>
+					<div className={styles.location}>
+						<FaLocationDot />
+						<span>Żywiec</span>
+					</div>
+					<div className={styles.location}>
+						<FaLocationDot />
+						<span>Nowy Targ</span>
+					</div>
+					<div className={styles.location}>
+						<FaLocationDot />
+						<span>Kęty</span>
+					</div>
+				</div>
+
+				<SocialsBox className={styles.home__socials} />
+				<a ref={cta} href='#about' className={styles.home__cta}>
+					<IoIosArrowDown />
+				</a>
+			</div>
+		</section>
+	);
+};

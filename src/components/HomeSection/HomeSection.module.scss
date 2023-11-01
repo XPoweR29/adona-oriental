@@ -1,16 +1,89 @@
 @import '../../sass/mixins';
+@import '../../sass/colors';
+@import '../../sass/animations';
 
 .home {
-    height: 100vh;
-    background-color: #3a3a3a;
-    padding-top: 6em;
+	position: relative;
+	height: 100vh;
+	background-color: #3a3a3a;
+	background-image: url('../../assets/img/home-img_small.jpg');
+	background-position: center;
+	background-size: cover;
+	z-index: 1;
 
-    .wrapper {
-        @include wrapper;
-    }
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -1;
+	}
 
-    &__title {
-        font-family: 'Zen Dots', sans-serif;
-        text-transform: uppercase;
-    }
+	.wrapper {
+		@include wrapper;
+	}
+
+	&__title {
+		padding-top: 4.5em;
+		margin-bottom: 2em;
+		font-family: 'Zen Dots', sans-serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		color: whitesmoke;
+
+		span {
+			color: $main-color;
+		}
+	}
+
+	&__hours,
+	.location {
+		display: flex;
+		gap: 1rem;
+		font-size: 1.8rem;
+		font-weight: bold;
+		color: $main-color;
+
+		span {
+			color: whitesmoke;
+		}
+	}
+
+	&__locations {
+		margin-top: 1.5em;
+
+		.location {
+			padding: 0.5rem;
+		}
+	}
+
+	&__socials {
+		position: absolute;
+		bottom: 1rem;
+		left: 0;
+		padding: 1rem;
+	}
+
+	&__cta {
+		position: absolute;
+		bottom: 1.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border: 1px dashed whitesmoke;
+		border-radius: 50%;
+		font-size: 3.5rem;
+		color: whitesmoke;
+
+		&.animate {
+			animation: wobble-ver-left 1s both;
+		}
+	}
 }

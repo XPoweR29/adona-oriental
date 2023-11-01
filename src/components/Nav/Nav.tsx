@@ -10,11 +10,11 @@ import { MobileMenu } from '../MobileMenu/MobileMenu';
 export const Nav = () => {
 	const { isMobile } = useContext(AppContext)!;
 	const [mobileMenuShown, setMobileMenuSHown] = useState(false);
-	const [siteScrolled, setSiteScrolled] = useState<boolean>(window.scrollY >=90);
+	const [siteScrolled, setSiteScrolled] = useState<boolean>(window.scrollY >=40);
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setSiteScrolled(window.scrollY >=90);
+			setSiteScrolled(window.scrollY >=40);
 		};
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
