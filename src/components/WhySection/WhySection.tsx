@@ -1,6 +1,6 @@
 import styles from './WhySection.module.scss';
-import { FaLeaf } from 'react-icons/fa';
 import { Icon } from '@iconify/react';
+import frame from '../../assets/img/frame.png';
 
 export const WhySection = () => {
 	return (
@@ -34,9 +34,13 @@ export const WhySection = () => {
 							Zamówienia obsługujemy błyskawicznie, aby dostarczyć Ci smaki Azji bez zbędnego czekania. Szybka dostawa to nasza specjalność.
 						</p>
 					</div>
-
 				</div>
 			</div>
+
+            <div className={styles.why__hero}>
+                <p>Twój smakowy kompas Azji</p>
+                <img src={frame} className={styles.frame}/>
+            </div>
 		</section>
 	);
 };
