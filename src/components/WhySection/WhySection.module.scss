@@ -1,0 +1,11 @@
+@import '../../sass/mixins';
+@import '../../sass/colors';
+
+.why {
+    @include section;
+    background-color: rgb(27, 27, 27);
+
+    .wrapper {
+        @include wrapper;
+    }
+}
