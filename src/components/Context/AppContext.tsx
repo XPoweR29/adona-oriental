@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 type AppContextType = {
 	isMobile: boolean;
-	setIsMobile: (val: boolean) => void;
+	mediumBreakpoint: boolean;
 };
 
 export const AppContext = createContext<AppContextType | null>(null);

@@ -45,6 +45,3 @@ export const Nav = () => {
 		</nav>
 	);
 };
-
-// TODO: Zaimplemetować zmianę tła po rozpoczęciu scrolowania.
-// IMPROVE: Po zaczęciu scrollowania logo może się nieco zmniejszć żeby nawigacja nie zabierała tyle miejsca.

@@ -3,9 +3,11 @@ import { AiOutlineClockCircle } from 'react-icons/ai';
 import { FaLocationDot } from 'react-icons/fa6';
 import { IoIosArrowDown } from 'react-icons/io';
 import { SocialsBox } from '../SocialsBox/SocialsBox';
-import { RefObject, useEffect, useRef } from 'react';
+import { RefObject, useContext, useEffect, useRef } from 'react';
+import { AppContext } from '../Context/AppContext';
 
 export const HomeSection = () => {
+	const { isMobile } = useContext(AppContext)!;
 	const cta = useRef(null) as RefObject<HTMLAnchorElement>;
 
 	useEffect(() => {
@@ -27,31 +29,36 @@ export const HomeSection = () => {
 					Z nami odkryjesz orientalne smaki <span>Azji</span>
 				</h1>
 
-				<div className={styles.home__hours}>
-					<AiOutlineClockCircle />
-					<span>10:00 - 22:00</span>
+				<div className={styles.home__info}>
+					<div className={styles.home__hours}>
+						<AiOutlineClockCircle />
+						<span>10:00 - 22:00</span>
+					</div>
+
+					<div className={styles.home__locations}>
+						<div className={styles.location}>
+							<FaLocationDot />
+							<span>Bielsko-Biała</span>
+						</div>
+						<div className={styles.location}>
+							<FaLocationDot />
+							<span>Żywiec</span>
+						</div>
+						<div className={styles.location}>
+							<FaLocationDot />
+							<span>Nowy Targ</span>
+						</div>
+						<div className={styles.location}>
+							<FaLocationDot />
+							<span>Kęty</span>
+						</div>
+					</div>
 				</div>
 
-				<div className={styles.home__locations}>
-					<div className={styles.location}>
-						<FaLocationDot />
-						<span>Bielsko-Biała</span>
-					</div>
-					<div className={styles.location}>
-						<FaLocationDot />
-						<span>Żywiec</span>
-					</div>
-					<div className={styles.location}>
-						<FaLocationDot />
-						<span>Nowy Targ</span>
-					</div>
-					<div className={styles.location}>
-						<FaLocationDot />
-						<span>Kęty</span>
-					</div>
-				</div>
+				{isMobile ? <SocialsBox className={styles.home__socials}/> 
+				: 
+				<button className={styles.home__menuBtn}>Zobacz Menu</button>}
 
-				<SocialsBox className={styles.home__socials} />
 				<a ref={cta} href='#about' className={styles.home__cta}>
 					<IoIosArrowDown />
 				</a>
