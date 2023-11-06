@@ -2,10 +2,47 @@
 @import '../../sass/colors';
 
 .why {
-    @include section;
-    background-color: rgb(27, 27, 27);
+	@include section;
+	padding: 0;
 
-    .wrapper {
-        @include wrapper;
-    }
+	.wrapper {
+		@include wrapper;
+	}
+
+	&__title {
+		@include sectionTitle;
+		text-align: center;
+	}
+
+	&__text {
+		text-align: center;
+	}
+
+	&__features {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+        margin-top: 3em;
+		gap: 3em;
+	}
+
+	.feature {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+        padding: 1em;
+		width: 250px;
+        text-align: center;
+
+        &__icon {
+            font-size: 6rem;
+            color: $main-color;
+        }
+
+        &__name {
+            padding: 0.5em 0;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+	}
 }
