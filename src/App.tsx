@@ -4,6 +4,7 @@ import { Nav } from './components/Nav/Nav';
 import { AppContext } from './components/Context/AppContext';
 import { AboutSection } from './components/AboutSection/AboutSection';
 import { WhySection } from './components/WhySection/WhySection';
+import { ReviewsSection } from './components/ReviewsSection/ReviewsSection';
 
 export const App = () => {
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
@@ -33,6 +34,7 @@ export const App = () => {
 			<HomeSection />
       <AboutSection />
       <WhySection/>
+      <ReviewsSection/>
 		</AppContext.Provider>
 	);
 };
