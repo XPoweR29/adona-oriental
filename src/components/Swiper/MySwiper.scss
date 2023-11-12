@@ -1,0 +1,124 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+
+.mySwiper {
+	@include wrapper;
+	position: relative;
+	margin-top: 2em;
+	padding: 0 1em;
+	height: 280px;
+	color: whitesmoke;
+	overflow: visible;
+	overflow-x: clip;
+	text-align: center;
+
+	img {
+		position: absolute;
+		width: 70px;
+		z-index: 100;
+		opacity: 0.3;
+
+		&.corner1 {
+			top: -18px;
+			left: 6px;
+			rotate: 90deg;
+		}
+
+		&.corner2 {
+			bottom: -13px;
+			right: 0px;
+			rotate: 180deg;
+		}
+	}
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: 1.5em;
+	gap: 0.5em;
+	text-align: left;
+	background-color: $bg-color-light;
+	cursor: default;
+
+	&__user {
+		font-weight: bold;
+		font-size: 1.8rem;
+	}
+
+	&__rating {
+		color: $main-color;
+	}
+
+	&__text {
+		font-style: italic;
+	}
+}
+
+//custom buttons
+.swiper-button {
+	&-prev,
+	&-next {
+		display: inline-block;
+		position: relative;
+		height: 50px;
+		width: 50px;
+		top: 80px;
+		text-align: center;
+		border: 1px solid whitesmoke;
+		background-color: $main-color;
+		color: whitesmoke;
+
+		&::after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 2rem;
+			font-weight: bold;
+		}
+	}
+
+	&-prev {
+		margin-right: 3em;
+	}
+
+	&-disabled {
+		opacity: 0.5 !important;
+		background-color: transparent;
+	}
+}
+
+@media (min-width: 450px) {
+	.mySwiper {
+		height: 200px;
+	}
+}
+
+@media (min-width: 768px) {
+	.mySwiper {
+		height: 250px;
+
+		img {
+			width: 80px;
+
+			&.corner1 {
+				top: -21px;
+				left: 7px;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.mySwiper {
+		img {
+			width: 90px;
+
+			&.corner1 {
+				top: -23px;
+				left: 7px;
+			}
+		}
+	}
+}
