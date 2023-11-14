@@ -6,6 +6,7 @@ import { AboutSection } from './components/AboutSection/AboutSection';
 import { WhySection } from './components/WhySection/WhySection';
 import { ReviewsSection } from './components/ReviewsSection/ReviewsSection';
 import { ContactSection } from './components/ContactSection/ContactSection';
+import { Footer } from './components/Footer/Footer';
 
 
 export const App = () => {
@@ -60,6 +61,7 @@ export const App = () => {
 			<WhySection />
 			<ReviewsSection />
 			<ContactSection/>
+			<Footer/>
 		</AppContext.Provider>
 	);
 };
