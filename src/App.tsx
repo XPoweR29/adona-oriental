@@ -5,6 +5,7 @@ import { AppContext } from './components/Context/AppContext';
 import { AboutSection } from './components/AboutSection/AboutSection';
 import { WhySection } from './components/WhySection/WhySection';
 import { ReviewsSection } from './components/ReviewsSection/ReviewsSection';
+import { ContactSection } from './components/ContactSection/ContactSection';
 
 
 export const App = () => {
@@ -58,6 +59,7 @@ export const App = () => {
 			<AboutSection />
 			<WhySection />
 			<ReviewsSection />
+			<ContactSection/>
 		</AppContext.Provider>
 	);
 };

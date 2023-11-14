@@ -37,25 +37,6 @@
 		align-items: stretch;
 		margin-top: 3em;
 		gap: 2em;
-
-		img {
-			position: absolute;
-			width: 80px;
-			height: 80px;
-			opacity: 0.2;
-		}
-
-		.corner1 {
-			top: -15px;
-			left: -15px;
-			rotate: 90deg;
-		}
-
-		.corner2 {
-			bottom: -15px;
-			right: -15px;
-			rotate: 180deg;
-		}
 	}
 
 	.card {

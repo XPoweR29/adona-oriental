@@ -1,0 +1,163 @@
+@import '../../sass/mixins';
+@import '../../sass/colors';
+
+.contact {
+	@include section;
+	position: relative;
+
+	.sectionImg_lanterns {
+		position: absolute;
+		top: 3em;
+		left: 0;
+		width: 60%;
+		transform: scaleX(-1);
+		opacity: 0.15;
+		z-index: 0;
+	}
+
+	.sectionImg_mosaic {
+		position: absolute;
+		bottom: 60px;
+		right: -150px;
+		width: 500px;
+		rotate: 30deg;
+		filter: invert(20%);
+		opacity: 0.7;
+		z-index: 0;
+	}
+
+	.wrapper {
+		@include wrapper;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__title {
+		@include sectionTitle;
+		text-align: right;
+	}
+
+	&__text {
+		text-align: right;
+		margin-top: 1.5em;
+	}
+
+	&__box {
+		margin-top: 3.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 2em;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+		z-index: 1;
+
+		span {
+			font-weight: bold;
+		}
+
+		.icon {
+			color: $main-color;
+			margin-right: 0.5em;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.contact {
+		.sectionImg_lanterns {
+			width: 345px;
+		}
+
+		.sectionImg_mosaic {
+			bottom: 70px;
+			right: -105px;
+		}
+
+		&__text {
+			width: 80%;
+			margin-left: auto;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.contact {
+		&__text {
+			width: 60%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.contact {
+		.sectionImg_lanterns {
+			width: 300px;
+		}
+
+		&__text {
+			width: 45%;
+		}
+
+		.contentBox {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: center;
+			align-items: start;
+			gap: 3em;
+			margin-top: 2em;
+		}
+
+		&__box {
+			margin: 0;
+			flex-grow: 1;
+			gap: 1em;
+
+			.hours {
+				display: flex;
+				gap: 0.5em;
+				margin-bottom: 1em;
+				font-weight: bold;
+
+				.icon {
+					color: $main-color;
+				}
+			}
+
+			.map {
+				width: 100%;
+				height: 250px;
+				margin-top: 1em;
+				z-index: 1;
+			}
+		}
+
+		&__item {
+			flex-direction: row;
+
+			width: 100%;
+
+			a:first-of-type {
+				width: 68%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.contact {
+		.sectionImg_mosaic {
+			width: 560px;
+			bottom: -5px;
+			right: 25px;
+		}
+
+		.contentBox {
+			gap: 7em;
+		}
+	}
+}
