@@ -52,7 +52,7 @@
 		justify-content: center;
 		align-items: center;
 		margin-top: 2em;
-		height: 200px;
+		height: 300px;
 		background-image: url('../../assets/img/plate-food-with-side-sauce.jpg');
 		background-attachment: fixed;
 		background-size: cover;
@@ -70,6 +70,21 @@
 			z-index: -1;
 		}
 
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(
+				0deg,
+				rgba(20, 18, 23, 1) 10%,
+				rgba(0, 0, 0, 0) 50%,
+				rgba(20, 18, 23, 1) 90%
+			);
+		}
+
 		p {
 			font-family: 'Zen Kurenaido', sans-serif;
 			font-size: 2rem;
@@ -80,16 +95,16 @@
 			position: absolute;
 			width: 100%;
 			max-width: 600px;
-			opacity: .4;
+			opacity: 0.4;
 		}
 	}
 }
 
-@media(min-width: 320px) {
+@media (min-width: 320px) {
 	.why {
 		&__hero {
-			height: 250px;
-			
+			height: 450px;
+
 			p {
 				font-size: 2.6rem;
 			}
@@ -97,7 +112,7 @@
 	}
 }
 
-@media(min-width: 576px) {
+@media (min-width: 576px) {
 	.why {
 		&__hero {
 			p {
@@ -107,10 +122,10 @@
 	}
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
 	.why {
 		&__hero {
-			height: 300px;
+			height:500px;
 
 			p {
 				font-size: 4rem;
@@ -118,3 +133,4 @@
 		}
 	}
 }
+

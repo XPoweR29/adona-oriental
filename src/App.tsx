@@ -7,6 +7,7 @@ import { WhySection } from './components/WhySection/WhySection';
 import { ReviewsSection } from './components/ReviewsSection/ReviewsSection';
 import { ContactSection } from './components/ContactSection/ContactSection';
 import { Footer } from './components/Footer/Footer';
+import { ToastContainer } from 'react-toastify';
 
 
 export const App = () => {
@@ -53,6 +54,8 @@ export const App = () => {
 		breakpoint
 	};
 
+
+
 	return (
 		<AppContext.Provider value={contextValues}>
 			<Nav />
@@ -60,8 +63,10 @@ export const App = () => {
 			<AboutSection />
 			<WhySection />
 			<ReviewsSection />
-			<ContactSection/>
-			<Footer/>
+			<ContactSection />
+			<Footer />
+
+			<ToastContainer />
 		</AppContext.Provider>
 	);
 };

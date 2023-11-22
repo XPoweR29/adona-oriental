@@ -2,28 +2,27 @@
 @import '../../sass/colors';
 
 .footer {
-    position: relative;
-    padding: 1em 0;
+	position: relative;
+	padding: 1em 0;
 	color: whitesmoke;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 90%;
-        height: 1px;
-        transform: translateX(-50%);
-        background-color: $main-color;
-    }
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 90%;
+		height: 1px;
+		transform: translateX(-50%);
+		background-color: $main-color;
+	}
 
 	.wrapper {
 		@include wrapper;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-        max-width: 720px !important;
-
+		max-width: 720px !important;
 	}
 
 	&__logo {
@@ -35,25 +34,24 @@
 	&__social {
 		display: flex;
 		flex-direction: column;
-        gap: 0.7em;
+		gap: 0.7em;
 
-        .link {
-            display: flex;
-            gap: 0.3em;
+		.link {
+			display: flex;
+			gap: 0.3em;
 
-            .icon {
-                color: $main-color;
-            }
-        }
+			.icon {
+				color: $main-color;
+			}
+		}
 	}
 }
 
-@media(min-width: 768px) {
-    .footer {
-
-        &__social {
-            flex-direction: row;
-            gap: 2em;
-        }
-    }
+@media (min-width: 768px) {
+	.footer {
+		&__social {
+			flex-direction: row;
+			gap: 2em;
+		}
+	}
 }

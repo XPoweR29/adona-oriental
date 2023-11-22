@@ -3,16 +3,16 @@
 
 .about {
 	position: relative;
-	min-height: 880px;
+	min-height: 940px;
 	@include section;
 
 	.bgMosaic_one {
 		position: absolute;
 		top: -50px;
 		right: -10px;
-		width: 250px;
+		width: 300px;
 		rotate: 45deg;
-		filter: invert(20%);
+		opacity: 0.15;
 		z-index: 1;
 	}
 
@@ -22,7 +22,7 @@
 		left: -30%;
 		width: 400px;
 		rotate: 60deg;
-		filter: invert(20%);
+		opacity: 0.15;
 		z-index: 1;
 	}
 
@@ -169,8 +169,6 @@
 
 @media (min-width: 1200px) {
 	.about {
-		.bgMosaic_one {
-		}
 
 		.bgMosaic_two {
 			bottom: -40px;

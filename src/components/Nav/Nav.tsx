@@ -24,7 +24,7 @@ export const Nav = () => {
 		<nav className={styles.nav}>
 			{<div className={`${styles.nav__bg} ${siteScrolled&& styles['nav__bg--active']}`}></div>}
 			<div className={styles.wrapper}>
-				<a href='' className={styles.nav__logo} hrefLang='#'>
+				<a href='#' className={styles.nav__logo}>
 					<img src={logo} />
 				</a>
 				{isMobile ? (

@@ -11,9 +11,9 @@ interface Props {
 
 export const menuLinks: menuLink[] = [
     {name: 'Start', href: '#'},
-    {name: 'O nas', href: '#'},
+    {name: 'O nas', href: '#about'},
     {name: 'Menu', href: '#'},
-    {name: 'Kontakt', href: '#'}
+    {name: 'Kontakt', href: '#contact'}
 ];
 
 export const NavBar = ({className}: Props) => {
