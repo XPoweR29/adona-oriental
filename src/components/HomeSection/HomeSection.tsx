@@ -7,7 +7,7 @@ import { RefObject, useContext, useEffect, useRef } from 'react';
 import { AppContext } from '../Context/AppContext';
 
 export const HomeSection = () => {
-	const { isMobile } = useContext(AppContext)!;
+	const { isMobile, setMenuShown } = useContext(AppContext)!;
 	const cta = useRef(null) as RefObject<HTMLAnchorElement>;
 
 	useEffect(() => {
@@ -57,7 +57,7 @@ export const HomeSection = () => {
 
 				{isMobile ? <SocialsBox className={styles.home__socials}/> 
 				: 
-				<button className={styles.home__menuBtn}>Zobacz Menu</button>}
+				<button className={styles.home__menuBtn} onClick={()=>setMenuShown(true)}>Zobacz Menu</button>}
 
 				<a ref={cta} href='#about' className={styles.home__cta}>
 					<IoIosArrowDown />

@@ -41,7 +41,7 @@ export const Nav = () => {
 				)}
 			</div>
 
-			{mobileMenuShown && <MobileMenu setMenuShown={setMobileMenuSHown} />}
+			{mobileMenuShown && <MobileMenu mobileMenuShown={setMobileMenuSHown} />}
 		</nav>
 	);
 };

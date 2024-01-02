@@ -8,6 +8,7 @@ import { ReviewsSection } from './components/ReviewsSection/ReviewsSection';
 import { ContactSection } from './components/ContactSection/ContactSection';
 import { Footer } from './components/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
+import { Menu } from './components/Menu/Menu';
 
 
 export const App = () => {
@@ -21,9 +22,8 @@ export const App = () => {
 
 	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
 	const [isLarge, setIsLarge] = useState<boolean>(window.innerWidth >= 992);
-	const [mediumBreakpoint, setMediumBreakpoint] = useState<boolean>(
-		window.innerWidth >= 576
-	);
+	const [mediumBreakpoint, setMediumBreakpoint] = useState<boolean>(window.innerWidth >= 576);
+	const [menuShown, setMenuShown] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -51,7 +51,8 @@ export const App = () => {
 		isMobile,
 		isLarge,
 		mediumBreakpoint,
-		breakpoint
+		breakpoint,
+		setMenuShown
 	};
 
 
@@ -65,7 +66,7 @@ export const App = () => {
 			<ReviewsSection />
 			<ContactSection />
 			<Footer />
-
+			{menuShown && <Menu/>}
 			<ToastContainer />
 		</AppContext.Provider>
 	);

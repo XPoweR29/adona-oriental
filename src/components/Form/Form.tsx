@@ -124,5 +124,3 @@ export const Form = () => {
 		</form>
 	);
 };
-
-//TODO: Zrobić odpowiedni popup z wiadomośćią o wysłaniu formularza. 

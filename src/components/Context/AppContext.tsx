@@ -13,6 +13,7 @@ type AppContextType = {
 	isLarge: boolean;
 	mediumBreakpoint: boolean;
 	breakpoint: Breakpoints;
+	setMenuShown: (val: boolean) => void; 
 
 };
 

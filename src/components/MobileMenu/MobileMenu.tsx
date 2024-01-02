@@ -1,12 +1,15 @@
 import styles from './MobileMenu.module.scss';
 import { menuLinks } from '../NavBar/NavBar';
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
+import { AppContext } from '../Context/AppContext';
 
 interface Props {
-	setMenuShown: (val: boolean) => void;
+	mobileMenuShown: (val: boolean) => void;
 }
 
-export const MobileMenu = ({setMenuShown}: Props) => {
+export const MobileMenu = ({mobileMenuShown}: Props) => {
+	const {setMenuShown} = useContext(AppContext)!;
+
 	useEffect(() => {
 		document.body.style.overflow = 'hidden';
 
@@ -23,7 +26,12 @@ export const MobileMenu = ({setMenuShown}: Props) => {
 					href={link.href} 
 					key={index}
 					style={{animationDelay: `${index*0.1}s`}}
-					onClick={()=>setMenuShown(false)}	
+					onClick={()=>{
+						if(link.name == 'Menu') {
+							setMenuShown(true);
+						}
+						mobileMenuShown(false);
+					}}	
 					>
 					{link.name}
 				</a>
