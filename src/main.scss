@@ -1,13 +1,24 @@
 @import './sass/reset';
 @import './sass/hamburger';
-
-// font-family: 'Jura', sans-serif;
-// font-family: 'Zen Dots', sans-serif;
+@import './sass/colors';
 
 body {
-    font-size: 1.6rem;
-    font-family: 'Jura', sans-serif;
-    min-width: 280px;
-    background-color: #141217;
-}
+	font-size: 1.6rem;
+	font-family: 'Jura', sans-serif;
+	min-width: 280px;
+	background-color: #141217;
 
+	&::-webkit-scrollbar {
+		width: 12px;
+		height: 20px;
+
+		&-thumb {
+			background-color: gray;
+			border-radius: 20px;
+		}
+
+		&-track {
+			opacity: 0.5;
+		}
+	}
+}

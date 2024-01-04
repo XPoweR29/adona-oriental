@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styles from './Form.module.scss';
 import { Icon } from '@iconify/react';
 import { validateForm } from '../../assets/utils/formValidation';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser';
+import { config } from '../../constants/emailjs';
 
 export interface formState {
 	name: string;
@@ -20,14 +22,32 @@ const initialState: formState = {
 };
 
 export const Form = () => {
-	const [errors, setErrors] = useState<{ [key in keyof formState]?: string }>({});
+	const [errors, setErrors] = useState<{ [key in keyof formState]?: string }>(
+		{}
+	);
 	const [formState, setFormState] = useState<formState>(initialState);
+	const form = useRef(null);
 
 	const sendForm = (e: React.FormEvent) => {
 		e.preventDefault();
 
-		if(validateForm(formState, setErrors)) {
-			console.log('Formularz poprawnie wysłany.');
+		if (validateForm(formState, setErrors)) {
+			emailjs
+				.sendForm(
+					config.SERVICE_ID,
+					config.TEMPLATE_ID,
+					form.current!,
+					config.PUBLIC_KEY
+				)
+				.then(
+					() => {
+						console.log('Formularz został poprawnie wysłany.');
+					},
+					(error) => {
+						console.log(error.text);
+					}
+				);
+
 			toast.success('Dziękujemy za kontakt!', {
 				position: 'top-center',
 				theme: 'colored',
@@ -36,11 +56,11 @@ export const Form = () => {
 		} else {
 			console.error('Błąd walidacji formularza!');
 		}
-
 	};
 
 	const handleChange = (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
 		setFormState((prev) => ({
 			...prev,
 			[e.target.name]: e.target.value,
@@ -50,7 +70,7 @@ export const Form = () => {
 	};
 
 	return (
-		<form className={styles.form} onSubmit={sendForm}>
+		<form className={styles.form} onSubmit={sendForm} ref={form}>
 			<div className={styles.inputBox}>
 				<div className={styles.inputContainer}>
 					<input

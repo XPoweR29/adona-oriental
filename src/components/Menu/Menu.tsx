@@ -20,6 +20,8 @@ export const Menu = () => {
 		};
 	});
 
+	console.log(window.innerHeight);
+
 	return (
 		<>
 			<div className={styles.menu}>
