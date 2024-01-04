@@ -1,0 +1,167 @@
+@import '../../sass/mixins';
+@import '../../sass/colors';
+@import '../../sass/animations';
+
+.home {
+	position: relative;
+	height: 100vh;
+	min-height: 550px;
+	background-color: #3a3a3a;
+	z-index: 1;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -1;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../../assets/img/home-img_small.jpg');
+		background-position: center;
+		background-size: cover;
+		animation: bgScale 40s linear infinite;
+		z-index: -2;
+	}
+
+	.wrapper {
+		@include wrapper;
+		position: relative;
+	}
+
+	&__title {
+		padding-top: 4em;
+		margin-bottom: 2em;
+		width: 50%;
+		font-family: 'Zen Dots', sans-serif;
+		font-weight: normal;
+		font-size: 3rem;
+		text-transform: uppercase;
+		color: whitesmoke;
+
+		span {
+			color: $main-color;
+		}
+
+		@media (max-height: 600px) {
+			font-size: 2.7rem;
+			margin-bottom: 1.2em;
+		}
+	}
+
+	&__hours,
+	.location {
+		display: flex;
+		gap: 1rem;
+		font-size: 1.8rem;
+		font-weight: bold;
+		color: $main-color;
+
+		span {
+			color: whitesmoke;
+		}
+	}
+
+	&__locations {
+		margin-top: 1.5em;
+
+		.location {
+			padding: 0.5rem;
+		}
+	}
+
+	&__socials {
+		position: absolute;
+		bottom: 1rem;
+		left: 0;
+		padding: 1rem;
+	}
+
+	&__cta {
+		position: absolute;
+		bottom: 1.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border: 1px dashed whitesmoke;
+		border-radius: 50%;
+		font-size: 3.5rem;
+		color: whitesmoke;
+
+		&.animate {
+			animation: wobble-ver-left 1s both;
+		}
+	}
+
+	&__menuBtn {
+		padding: 0.5em 1em;
+		margin-top: 4em;
+		font-size: 1.8rem;
+		font-weight: bold;
+		background-color: transparent;
+		color: whitesmoke;
+		border: 2px solid whitesmoke;
+		scale: 1;
+		transition: scale 0.3s;
+
+		&:hover {
+			scale: 1.05;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.home {
+		&::after {
+			background-image: url('../../assets/img/home-img_large.jpg');
+		}
+
+		&__title {
+			font-size: 3.8rem;
+			width: 80%;
+			padding-top: 5em;
+		}
+
+		&__info {
+			display: flex;
+			gap: 1em;
+		}
+
+		&__locations {
+			margin-top: 0;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.home {
+		&__title {
+			width: 70%;
+			padding-top: 4.5em;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.home {
+		&__title {
+			padding-top: 6em;
+			width: 50%;
+		}
+	}
+}

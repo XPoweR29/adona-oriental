@@ -1,0 +1,76 @@
+@import '../../sass/colors';
+
+.form {
+	margin-top: 3em;
+	padding: 1em;
+
+	.inputBox {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2em;
+		position: relative;
+
+		input,
+		textarea {
+			width: 100%;
+			padding: 1rem;
+			font-size: 1.6rem;
+			background-color: transparent;
+			border: 1px solid whitesmoke;
+			color: whitesmoke;
+		}
+
+		textarea {
+			height: 200px;
+			resize: none;
+			padding-right: 1em;
+		}
+
+		.error {
+			font-size: 1.4rem;
+			min-height: 1.7rem;
+			color: rgb(226, 19, 19);
+			text-shadow: 0px 0px 5px rgb(128, 38, 38);
+			visibility: hidden;
+
+			&--active {
+				visibility: visible;
+			}
+		}
+
+		button {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 60px;
+			height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 3.5rem;
+			border: 1px solid whitesmoke;
+			background-color: $main-color;
+			color: whitesmoke;
+		}
+	}
+
+	.gdpr {
+		display: flex;
+		align-items: start;
+		gap: 1em;
+		margin-top: 1em;
+
+		p {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.form {
+		margin: 0;
+		margin-right: auto;
+		padding: 0;
+		width: 40%;
+	}
+}

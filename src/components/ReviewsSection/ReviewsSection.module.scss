@@ -1,0 +1,130 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+
+.reviews {
+	@include section;
+	position: relative;
+	padding-top: 14rem;
+	padding-bottom:10em;
+
+	.wrapper {
+		@include wrapper;
+	}
+
+	.sectionImg {
+		position: absolute;
+		top: -60px;
+		right: 20px;
+		width: 240px;
+		opacity: 0.3;
+	}
+
+	&__title {
+		@include sectionTitle;
+		width: 75%;
+	}
+
+	&__text {
+		padding: 1.5em 0;
+	}
+
+	&__box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: stretch;
+		margin-top: 3em;
+		gap: 2em;
+	}
+
+	.card {
+		height: 200px;
+		padding: 1em 2em;
+		background-color: $bg-color-light;
+
+		&__user {
+			font-weight: bold;
+			padding-bottom: 1em;
+		}
+
+		&__rating {
+			color: $main-color;
+			padding-bottom: 0.5em;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 3em;
+
+		.next,
+		.prev {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0.5em;
+			height: 50px;
+			width: 50px;
+			font-size: 2.6rem;
+			color: whitesmoke;
+			background-color: transparent;
+			border: 1px solid whitesmoke;
+		}
+
+		.next svg {
+			rotate: 180deg;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.reviews {
+		.sectionImg {
+			width: 300px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.reviews {
+		.sectionImg {
+			width: 350px;
+			top: -90px;
+		}
+
+		&__title,
+		&__text {
+			width: 70%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.reviews {
+		.sectionImg {
+			width: 420px;
+			right: 150px;
+		}
+
+		&__title,
+		&__text {
+			width: 50%;
+		}
+
+		&__box {
+			flex-direction: row;
+			gap: 2.5em;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.reviews {
+		.sectionImg {
+			right: 200px;
+		}
+	}
+}

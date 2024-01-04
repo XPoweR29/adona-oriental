@@ -1,0 +1,122 @@
+[
+    {
+        "groupName": "Przystawki / Starter",
+        "items": [
+            {
+                "name": "Sajgonki",
+                "engName": "Spring rolls with Sajgon sauce",
+                "price": 16.50
+            },
+            {
+                "name": "Szczypce Krabowe",
+                "engName": "Crab with sesame",
+                "price": 10.50
+            },
+            {
+                "name": "Pierożki z krewetek",
+                "engName": "Dumplings with shrimp",
+                "price": 17.90
+            }
+        ]
+    },
+    {
+        "groupName": "Dania główne / Main dishes",
+        "items": [
+            {
+                "name": "Kaczka po pekińsku",
+                "engName": "Peking duck with plum sauce",
+                "price": 45.90
+            },
+            {
+                "name": "Kurczak teriyaki",
+                "engName": "Teriyaki chicken with vegetables",
+                "price": 28.75
+            },
+            {
+                "name": "Krewetki curry",
+                "engName": "Curry shrimp with coconut milk",
+                "price": 32.50
+            }
+        ]
+    },
+    {
+        "groupName": "Zupa specjalna / Soup",
+        "items": [
+            {
+                "name": "Rosół z makaronem sojowym",
+                "engName": "Broth with soja nudles",
+                "price": 9.30
+            },
+            {
+                "name": "Zupa Huntun",
+                "engName": "Soup Huntun",
+                "price": 9.90
+            },
+            {
+                "name": "Zupa z krabów",
+                "engName": "Soup Crab",
+                "price": 8.70
+            }
+        ]
+    },
+    {
+        "groupName": "Przystawki / Starter",
+        "items": [
+            {
+                "name": "Sajgonki",
+                "engName": "Spring rolls with Sajgon sauce",
+                "price": 16.50
+            },
+            {
+                "name": "Szczypce Krabowe",
+                "engName": "Crab with sesame",
+                "price": 10.50
+            },
+            {
+                "name": "Pierożki z krewetek",
+                "engName": "Dumplings with shrimp",
+                "price": 17.90
+            }
+        ]
+    },
+    {
+        "groupName": "Dania główne / Main dishes",
+        "items": [
+            {
+                "name": "Kaczka po pekińsku",
+                "engName": "Peking duck with plum sauce",
+                "price": 45.90
+            },
+            {
+                "name": "Kurczak teriyaki",
+                "engName": "Teriyaki chicken with vegetables",
+                "price": 28.75
+            },
+            {
+                "name": "Krewetki curry",
+                "engName": "Curry shrimp with coconut milk",
+                "price": 32.50
+            }
+        ]
+    },
+    {
+        "groupName": "Zupa specjalna / Soup",
+        "items": [
+            {
+                "name": "Rosół z makaronem sojowym",
+                "engName": "Broth with soja nudles",
+                "price": 9.30
+            },
+            {
+                "name": "Zupa Huntun",
+                "engName": "Soup Huntun",
+                "price": 9.90
+            },
+            {
+                "name": "Zupa z krabów",
+                "engName": "Soup Crab",
+                "price": 8.70
+            }
+        ]
+    }
+]

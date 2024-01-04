@@ -1,0 +1,19 @@
+@import '../../sass/colors';
+
+.item {
+	border-bottom: 1px dotted $main-color;
+	padding-bottom: 0.5em;
+	margin-top: 1em;
+	display: flex;
+
+	.name {
+		.english {
+			font-size: 1.3rem;
+			color: gray;
+		}
+	}
+
+	.price {
+		margin-left: auto;
+	}
+}
