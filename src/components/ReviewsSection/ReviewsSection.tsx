@@ -12,7 +12,7 @@ export const ReviewsSection = () => {
 				<h2 className={styles.reviews__title}>Co mówią nasi goście?</h2>
 				<p className={styles.reviews__text}>
 					Opinie naszych klientów są dla nas najważniejsze. Poznaj ich
-					doświadczenia i smakuj razen z nami prawdzieiw orientalne smaki
+					doświadczenia i smakuj razem z nami prawdziwie orientalne smaki!
 				</p>
 
 				<MySwiper />
