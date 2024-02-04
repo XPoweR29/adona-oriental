@@ -8,8 +8,8 @@ interface Props {
 export const SocialsBox = ({className}: Props) => {
     return (
         <div className={`${styles.socialsBox} ${className}`}>
-            <a href="#"><AiFillFacebook/></a>
-            <a href="#"><AiFillInstagram/></a>
+            <a href="http://www.facebook.pl"><AiFillFacebook/></a>
+            <a href="http://www.instagram.com"><AiFillInstagram/></a>
         </div>
     );
 }
