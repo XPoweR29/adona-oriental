@@ -10,8 +10,10 @@
         position: relative;
         font-size: 1.8rem;
         color: whitesmoke;
-        transition: color .3s;
+        transition: color .3s, scale .3s;
         cursor: pointer;
+
+        scale: 1;
 
         &::before {
             position: absolute;
@@ -26,7 +28,8 @@
         }
         
         &:hover {
-            color: $main-color;
+            scale: 1.1;
+            text-shadow: 0px 0px 10px black;
 
             &::before{
                 width: 100%;

@@ -9,6 +9,7 @@ import { ContactSection } from './components/ContactSection/ContactSection';
 import { Footer } from './components/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
 import { Menu } from './components/Menu/Menu';
+import { GallerySection } from './components/GallerySection/GallerySection';
 
 
 export const App = () => {
@@ -23,7 +24,7 @@ export const App = () => {
 	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
 	const [isLarge, setIsLarge] = useState<boolean>(window.innerWidth >= 992);
 	const [mediumBreakpoint, setMediumBreakpoint] = useState<boolean>(window.innerWidth >= 576);
-	const [menuShown, setMenuShown] = useState(false);
+	const [menuShown, setMenuShown] = useState<boolean>(false);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -52,7 +53,7 @@ export const App = () => {
 		isLarge,
 		mediumBreakpoint,
 		breakpoint,
-		setMenuShown
+		setMenuShown,
 	};
 
 
@@ -63,6 +64,7 @@ export const App = () => {
 			<HomeSection />
 			<AboutSection />
 			<WhySection />
+			<GallerySection/>
 			<ReviewsSection />
 			<ContactSection />
 			<Footer />

@@ -4,6 +4,7 @@
 .about {
 	position: relative;
 	min-height: 940px;
+	scroll-margin-top: 50px;
 	@include section;
 
 	.bgMosaic_one {

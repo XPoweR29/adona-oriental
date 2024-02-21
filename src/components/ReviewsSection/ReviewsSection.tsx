@@ -1,6 +1,6 @@
 import styles from './ReviewsSection.module.scss';
 import lanterns from '../../assets/img/lanterns_2.png';
-import { MySwiper } from '../Swiper/MySwiper';
+import { ReviewSwiper } from '../ReviewSwiper/ReviewSwiper';
 
 export const ReviewsSection = () => {
 
@@ -15,7 +15,7 @@ export const ReviewsSection = () => {
 					doświadczenia i smakuj razem z nami prawdziwie orientalne smaki!
 				</p>
 
-				<MySwiper />
+				<ReviewSwiper />
 			</div>
 		</section>
 	);
