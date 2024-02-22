@@ -11,11 +11,11 @@ export const AboutSection = () => {
 
 	return (
 		<section className={styles.about} id='about'>
-			<img src={bgSectionMosaic} className={styles.bgMosaic_one} />
-			<img src={bgSectionMosaic} className={styles.bgMosaic_two} />
-			{mediumBreakpoint && <img src={bgSectionImg_one} className={styles.sectionImg_one} />}
-
 			<div className={styles.wrapper}>
+				<img src={bgSectionMosaic} className={styles.bgMosaic_one} />
+				<img src={bgSectionMosaic} className={styles.bgMosaic_two} />
+				{mediumBreakpoint && (<img src={bgSectionImg_one} className={styles.sectionImg_one} />)}
+				
 				<div className={styles.about__box}>
 					{!isMobile && <img src={aboutImg} className={styles.about__img} />}
 
@@ -37,10 +37,14 @@ export const AboutSection = () => {
 							przeżyć prawdziwą podróż kulinarną.
 						</p>
 
-						{!mediumBreakpoint && <img src={bgSectionImg_one} className={styles.sectionImg_one} />}
+						{!mediumBreakpoint && (
+							<img src={bgSectionImg_one} className={styles.sectionImg_one} />
+						)}
 					</div>
 
-					{mediumBreakpoint && <img src={bgSectionImg_two} className={styles.sectionImg_two} />}
+					{mediumBreakpoint && (
+						<img src={bgSectionImg_two} className={styles.sectionImg_two} />
+					)}
 				</div>
 			</div>
 		</section>

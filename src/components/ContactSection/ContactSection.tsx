@@ -13,10 +13,21 @@ export const ContactSection = () => {
 
 	return (
 		<section className={styles.contact} id='contact'>
-			<img src={lanterns} className={styles.sectionImg_lanterns} />
-			<img src={mosaic} className={styles.sectionImg_mosaic} />
+			{breakpoint.xxl ? null : (
+				<>
+					<img src={lanterns} className={styles.sectionImg_lanterns} />
+					<img src={mosaic} className={styles.sectionImg_mosaic} />
+				</>
+			)}
 
 			<div className={styles.wrapper}>
+				{breakpoint.xxl && (
+					<>
+						<img src={lanterns} className={styles.sectionImg_lanterns} />
+						<img src={mosaic} className={styles.sectionImg_mosaic} />
+					</>
+				)}
+
 				<h2 className={styles.contact__title}>Jak możemy cię obsłużyć?</h2>
 				<p className={styles.contact__text}>
 					Zamów wyjątkowe dania kuchni azjatyckiej lub skontaktuj się z nami,
@@ -26,10 +37,9 @@ export const ContactSection = () => {
 
 				<div className={styles.contentBox}>
 					<div className={styles.contact__box}>
-
 						{breakpoint.lg && (
 							<div className={styles.hours}>
-								<AiOutlineClockCircle className={styles.icon}/>
+								<AiOutlineClockCircle className={styles.icon} />
 								<p>10:00 - 22:00</p>
 							</div>
 						)}
@@ -59,7 +69,7 @@ export const ContactSection = () => {
 							localize='https://www.google.com/maps/place/Restauracja+Adona/@49.8835941,19.2219559,19.25z/data=!4m14!1m7!3m6!1s0x47169b340fda0143:0x761f1edf89bfae96!2sRestauracja+Adona!8m2!3d49.8834733!4d19.2223616!16s%2Fg%2F11sry285_k!3m5!1s0x47169b340fda0143:0x761f1edf89bfae96!8m2!3d49.8834733!4d19.2223616!16s%2Fg%2F11sry285_k?entry=ttu'
 						/>
 
-						{breakpoint.lg && <Map className={styles.map}/>}
+						{breakpoint.lg && <Map className={styles.map} />}
 					</div>
 
 					<Form />

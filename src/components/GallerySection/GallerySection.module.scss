@@ -112,13 +112,10 @@
 		.box {
 			grid-template-columns: 0.8fr 1fr 0.5fr;
 			grid-template-rows: repeat(10, 1fr);
-			height: 70vh;
-			width: 70%;
-			max-width: 690px;
+			max-height: 600px;
+			max-width: 600px;
 			margin: 0 auto;
 			gap: 0.8em;
-
-			// height: 90vh;
 
 			.thumbnail {
 				height: auto;

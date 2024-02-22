@@ -17,8 +17,8 @@ export interface formState {
 const initialState: formState = {
 	name: '',
 	email: '',
-	phone: '',
-	message: '',
+	phone: '', 
+	message: '', 
 };
 
 export const Form = () => {
@@ -49,7 +49,7 @@ export const Form = () => {
 				);
 
 			toast.success('Dziękujemy za kontakt!', {
-				position: 'top-center',
+				position: 'bottom-right',
 				theme: 'colored',
 			});
 			setFormState(initialState);
