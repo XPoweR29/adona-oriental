@@ -18,7 +18,6 @@ export const GallerySection = () => {
             ); 
             setImages(srcs);
         };
-        console.log(images)
         loadImages(); 
     }, []);
 
