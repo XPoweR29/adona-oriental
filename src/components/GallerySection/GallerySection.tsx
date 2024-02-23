@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './GallerySection.module.scss';
 import { Preview } from '../Preview/Preview';
-import mosaic from '../../assets/img/mosaic 2.png';
+import mosaic from '../../assets/img/mosaic 2.png'; 
 
 export const GallerySection = () => {
     const [images, setImages] = useState<string[]>([]);
@@ -9,9 +9,16 @@ export const GallerySection = () => {
     const [clickedImg, setClickedImg] = useState<string | null>(null);
     useEffect(() => {
         const loadImages = async () => {
-            const srcs = import.meta.glob('../../../public/photos/*.jpg');
-            setImages(Object.keys(srcs));
+            const importFns = import.meta.glob('../../../src/assets/photos/*.jpg');
+            const srcs = await Promise.all(
+                Object.values(importFns).map(async(importFns) => {
+                    const module: any = await importFns();
+                    return module.default;
+                })
+            ); 
+            setImages(srcs);
         };
+        console.log(images)
         loadImages(); 
     }, []);
 
