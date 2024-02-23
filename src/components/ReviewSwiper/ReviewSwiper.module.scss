@@ -1,7 +1,7 @@
 @import '../../sass/colors';
 @import '../../sass/mixins';
 
-.mySwiper {
+.reviewSwiper {
 	@include wrapper;
 	position: relative;
 	margin-top: 2em;
@@ -30,35 +30,32 @@
 			rotate: 180deg;
 		}
 	}
-}
 
-.card {
-	display: flex;
-	flex-direction: column;
-	padding: 1.5em;
-	gap: 0.5em;
-	text-align: left;
-	background-color: $bg-color-light;
-	cursor: default;
+	.card {
+		display: flex;
+		flex-direction: column;
+		padding: 1.5em;
+		gap: 0.5em;
+		text-align: left;
+		background-color: $bg-color-light;
+		cursor: default;
 
-	&__user {
-		font-weight: bold;
-		font-size: 1.8rem;
+		&__user {
+			font-weight: bold;
+			font-size: 1.8rem;
+		}
+
+		&__rating {
+			color: $main-color;
+		}
+
+		&__text {
+			font-style: italic;
+		}
 	}
 
-	&__rating {
-		color: $main-color;
-	}
-
-	&__text {
-		font-style: italic;
-	}
-}
-
-//custom buttons
-.swiper-button {
-	&-prev,
-	&-next {
+	:global(.swiper-button-prev),
+	:global(.swiper-button-next) {
 		display: inline-block;
 		position: relative;
 		height: 50px;
@@ -68,35 +65,44 @@
 		border: 1px solid whitesmoke;
 		background-color: $main-color;
 		color: whitesmoke;
-
-		&::after {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			font-size: 2rem;
-			font-weight: bold;
-		}
 	}
 
-	&-prev {
+	:global(.swiper-button-prev) {
 		margin-right: 3em;
 	}
 
-	&-disabled {
+	:global(.swiper-button-prev)::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	:global(.swiper-button-next)::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	:global(.swiper-button-disabled) {
 		opacity: 0.5 !important;
 		background-color: transparent;
 	}
 }
 
 @media (min-width: 450px) {
-	.mySwiper {
+	.reviewSwiper {
 		height: 200px;
 	}
 }
 
 @media (min-width: 768px) {
-	.mySwiper {
+	.reviewSwiper {
 		height: 250px;
 
 		img {
@@ -111,7 +117,7 @@
 }
 
 @media (min-width: 992px) {
-	.mySwiper {
+	.reviewSwiper {
 		img {
 			width: 90px;
 

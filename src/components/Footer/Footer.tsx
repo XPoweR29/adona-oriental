@@ -21,7 +21,7 @@ export const Footer = () => {
 							kontakt@adona.pl
 						</a>
 
-						<a className={styles.link} href='http://facebok.com' target='_blank'>
+						<a className={styles.link} href='https://www.facebook.com/adona.bb/?locale=pl_PL' target='_blank'>
 							<FaFacebookSquare className={styles.icon} />
 							facebook/adona
 						</a>

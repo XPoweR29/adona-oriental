@@ -1,0 +1,97 @@
+@import '../../sass/colors';
+@import '../../sass/animations';
+@import '../../sass/mixins';
+
+.previewContainer {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	min-width: 280px;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(2px);
+	z-index: 100;
+	animation: fadeIn 0.7s forwards;
+
+	.wrapper {
+		position: relative;
+		@include wrapper;
+	}
+
+	.closeBtn {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 30px;
+		right: 30px;
+		height: 40px;
+		width: 40px;
+		font-size: 3rem;
+		background-color: transparent;
+		color: whitesmoke;
+		border: 1px solid whitesmoke;
+		transition: background-color 0.1s;
+
+		&:hover {
+			background-color: $main-color;
+		}
+	}
+}
+
+.photosSwiper {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	translate: -50% -50%;
+	width: 90%;
+	height: 80%;
+	border-radius: 10px;
+
+	.photo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		img {
+			max-height: 85%;
+			max-width: 100%;
+			object-fit: contain;
+			border-radius: 10px;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	:global(.swiper-button-next),
+	:global(.swiper-button-prev) {
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		color: whitesmoke;
+		display: none;
+	}
+
+	:global(.swiper-pagination-bullet) {
+		height: 12px;
+		width: 12px;
+		opacity: 0.3;
+		background: white;
+	}
+
+	:global(.swiper-pagination-bullet-active) {
+		border: 1px solid whitesmoke;
+		background-color: $main-color;
+		opacity: 1;
+	}
+}
+
+@media (min-width: 768px) {
+	.photosSwiper {
+		:global(.swiper-button-next),
+		:global(.swiper-button-prev) {
+			display: block;
+		}
+	}
+}

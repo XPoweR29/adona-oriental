@@ -7,7 +7,7 @@ import data from '../../assets/reviews_mockup/mockup.json';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
-import './MySwiper.scss';
+import styles from './ReviewSwiper.module.scss';
 import { useContext } from 'react';
 import { AppContext } from '../Context/AppContext';
 
@@ -17,35 +17,35 @@ interface Review {
 	review: string;
 }
 
-export const MySwiper: React.FC = () => {
+export const ReviewSwiper: React.FC = () => {
 	const {breakpoint} = useContext(AppContext)!;
 	const reviews: Review[] = data;
 
 	return (
 		<Swiper
-			className={`mySwiper`}
+			className={styles.reviewSwiper}
 			modules={[Autoplay, Navigation]}
 			spaceBetween={35}
-			slidesPerView={breakpoint.lg ? 3 : (breakpoint.md ? 2 : 1)}
+			slidesPerView={breakpoint.lg ? 3 : breakpoint.md ? 2 : 1}
 			slidesPerGroup={1}
 			navigation
 			autoplay={{ delay: 5000, disableOnInteraction: false }}>
 			{reviews.map((rev, index) => (
-				<SwiperSlide className='card' key={index}>
-					<h4 className='card__user'>{rev.nickname}</h4>
+				<SwiperSlide className={styles.card} key={index}>
+					<h4 className={styles.card__user}>{rev.nickname}</h4>
 
-					<div className='card__rating'>
+					<div className={styles.card__rating}>
 						{Array.from({ length: rev.rate }, (_, i) => (
 							<AiFillStar key={i} />
 						))}
 					</div>
 
-					<p className='card__text'>{`" ${rev.review} "`}</p>
+					<p className={styles.card__text}>{`" ${rev.review} "`}</p>
 				</SwiperSlide>
 			))}
 
-			<img src={corner1} className='corner1' />
-			<img src={corner2} className='corner2' />
+			<img src={corner1} className={styles.corner1} />
+			<img src={corner2} className={styles.corner2} />
 		</Swiper>
 	);
 };

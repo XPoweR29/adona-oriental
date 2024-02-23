@@ -2,9 +2,9 @@
 @import '../../sass/colors';
 
 .about {
-	position: relative;
-	min-height: 940px;
 	@include section;
+	min-height: 940px;
+	scroll-margin-top: 50px;
 
 	.bgMosaic_one {
 		position: absolute;
@@ -28,6 +28,7 @@
 
 	.wrapper {
 		@include wrapper;
+		position: relative;
 		display: flex;
 		justify-content: center;
 	}
@@ -100,10 +101,10 @@
 
 		.sectionImg_one {
 			position: absolute;
-			top: 1rem;
-			left: 0;
+			top: -76px;
+			left: -100px;
 			width: 280px;
-			transform: scaleX(-1);
+			rotate: -90deg;
 			z-index: 2;
 		}
 

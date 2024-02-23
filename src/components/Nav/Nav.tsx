@@ -21,7 +21,7 @@ export const Nav = () => {
 	});
 
 	return (
-		<nav className={styles.nav}>
+		<nav className={`${styles.nav} ${siteScrolled && styles['nav--shadow']}`}>
 			{<div className={`${styles.nav__bg} ${siteScrolled&& styles['nav__bg--active']}`}></div>}
 			<div className={styles.wrapper}>
 				<a href='#' className={styles.nav__logo}>

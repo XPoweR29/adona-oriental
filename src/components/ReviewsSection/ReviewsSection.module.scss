@@ -3,17 +3,17 @@
 
 .reviews {
 	@include section;
-	position: relative;
 	padding-top: 14rem;
 	padding-bottom:10em;
 
 	.wrapper {
 		@include wrapper;
+		position: relative;
 	}
 
 	.sectionImg {
 		position: absolute;
-		top: -60px;
+		top: -200px;
 		right: 20px;
 		width: 240px;
 		opacity: 0.3;
@@ -92,7 +92,7 @@
 	.reviews {
 		.sectionImg {
 			width: 350px;
-			top: -90px;
+			top: -250px;
 		}
 
 		&__title,
@@ -106,7 +106,7 @@
 	.reviews {
 		.sectionImg {
 			width: 420px;
-			right: 150px;
+			right: 50px;
 		}
 
 		&__title,

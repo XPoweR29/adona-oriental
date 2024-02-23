@@ -4,6 +4,7 @@
 .contact {
 	@include section;
 	position: relative;
+	scroll-margin-top: 30px;
 
 	.sectionImg_lanterns {
 		position: absolute;
