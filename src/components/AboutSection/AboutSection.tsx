@@ -1,4 +1,6 @@
 import styles from './AboutSection.module.scss';
+//IMPROVE: zastanowić się którą grafikę zostawić
+// import bgSectionImg_one from '../../assets/img/sizzler.png';
 import bgSectionImg_one from '../../assets/img/asian_food.png';
 import bgSectionImg_two from '../../assets/img/seasonings.png';
 import aboutImg from '../../assets/img/interior-img.jpg';
