@@ -1,4 +1,5 @@
 @import '../../sass/mixins';
+@import '../../sass/animations';
 
 .modal {
 	position: fixed;
@@ -9,6 +10,7 @@
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(2px);
 	z-index: 100;
+	animation: puffIn 0.5s;
 
 	.wrapper {
 		@include wrapper;

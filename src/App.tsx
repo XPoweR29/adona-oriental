@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { HomeSection } from './components/HomeSection/HomeSection';
 import { Nav } from './components/Nav/Nav';
 import { AppContext } from './components/Context/AppContext';
@@ -14,6 +14,7 @@ import { InfoModal } from './components/InfoModal/InfoModal';
 import { ModalConfig, getFirestoreData } from './utils/getFirestoreData';
 
 export const App = () => {
+	const modalTimerRef = useRef<NodeJS.Timeout | null>(null);
 	const [breakpoint, setBreakpoint] = useState({
 		sm: window.innerWidth >= 576,
 		md: window.innerWidth >= 768,
@@ -24,11 +25,9 @@ export const App = () => {
 
 	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
 	const [isLarge, setIsLarge] = useState<boolean>(window.innerWidth >= 992);
-	const [mediumBreakpoint, setMediumBreakpoint] = useState<boolean>(
-		window.innerWidth >= 576
-	);
+	const [mediumBreakpoint, setMediumBreakpoint] = useState<boolean>(window.innerWidth >= 576);
 	const [menuShown, setMenuShown] = useState<boolean>(false);
-	const [showInfoModal, setShowInfoModal] = useState<boolean>(true);
+	const [showInfoModal, setShowInfoModal] = useState<boolean>(false);
 	const [configData, setConfigData] = useState<ModalConfig | undefined>(undefined);
 
 	useEffect(() => {
@@ -56,7 +55,16 @@ export const App = () => {
 		(async () => {
 			const configData = await getFirestoreData('1tu7lzQPMdDnGZCFv5IO');
 			setConfigData(configData);
+			if (configData?.modalEnabled) {
+				modalTimerRef.current = setTimeout(() => {
+					setShowInfoModal(true);
+				}, 1000);
+			}
 		})();
+	}, []);
+
+	const clearModalTimer = useCallback(() => {
+		if(modalTimerRef.current) clearTimeout(modalTimerRef.current);
 	}, []);
 
 	const contextValues = {
@@ -80,7 +88,7 @@ export const App = () => {
 			<ContactSection />
 			<Footer />
 			{menuShown && <Menu />}
-			{configData?.modalEnabled && showInfoModal && <InfoModal modalContent={configData?.modalContent}/>}
+			{showInfoModal && <InfoModal modalContent={configData?.modalContent} clearModalTimer={clearModalTimer}/>}
 			<ToastContainer />
 		</AppContext.Provider>
 	);

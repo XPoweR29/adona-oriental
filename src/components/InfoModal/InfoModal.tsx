@@ -4,11 +4,13 @@ import { AppContext } from '../Context/AppContext';
 
 interface Props {
     modalContent: string | undefined;
+    clearModalTimer: () => void;
 }
 
-export const InfoModal = ({modalContent}: Props) => {
+export const InfoModal = ({modalContent, clearModalTimer}: Props) => {
     const {setShowInfoModal} = useContext(AppContext)!;
 
+    //FIXME: pozwól scrollować to bedzie sie dało odłonić przycisk!
 	useEffect(() => {
 		document.body.style.overflow = 'hidden';
 
@@ -22,7 +24,10 @@ export const InfoModal = ({modalContent}: Props) => {
 			<div className={styles.container}>
 				<div className={styles.wrapper}>
 					<p className={styles.content}>{modalContent}</p>
-					<button className={styles.closeBtn} onClick={() => setShowInfoModal(false)}>Zamknij</button>
+					<button className={styles.closeBtn} onClick={() => {
+                        setShowInfoModal(false);
+                        clearModalTimer();
+                    }}>Zamknij</button>
 				</div>
 			</div>
 		</div>
