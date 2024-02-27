@@ -14,6 +14,8 @@ type AppContextType = {
 	mediumBreakpoint: boolean;
 	breakpoint: Breakpoints;
 	setMenuShown: (val: boolean) => void; 
+	showInfoModal: boolean;
+	setShowInfoModal: (show: boolean) => void;
 };
 
 export const AppContext = createContext<AppContextType | null>(null);

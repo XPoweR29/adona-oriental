@@ -1,0 +1,39 @@
+@import '../../sass/mixins';
+
+.modal {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(2px);
+	z-index: 100;
+
+	.wrapper {
+		@include wrapper;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.container {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 2em;
+		background-color: whitesmoke;
+
+		.content {
+			font-weight: bold;
+		}
+
+		.closeBtn {
+			border: 1px solid black;
+			padding: 0.5em;
+			font-weight: bold;
+			margin-top: 1.5em;
+			margin-left: auto;
+		}
+	}
+
+}

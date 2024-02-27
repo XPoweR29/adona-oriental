@@ -10,7 +10,8 @@ import { Footer } from './components/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
 import { Menu } from './components/Menu/Menu';
 import { GallerySection } from './components/GallerySection/GallerySection';
-
+import { InfoModal } from './components/InfoModal/InfoModal';
+import { ModalConfig, getFirestoreData } from './utils/getFirestoreData';
 
 export const App = () => {
 	const [breakpoint, setBreakpoint] = useState({
@@ -23,8 +24,12 @@ export const App = () => {
 
 	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
 	const [isLarge, setIsLarge] = useState<boolean>(window.innerWidth >= 992);
-	const [mediumBreakpoint, setMediumBreakpoint] = useState<boolean>(window.innerWidth >= 576);
+	const [mediumBreakpoint, setMediumBreakpoint] = useState<boolean>(
+		window.innerWidth >= 576
+	);
 	const [menuShown, setMenuShown] = useState<boolean>(false);
+	const [showInfoModal, setShowInfoModal] = useState<boolean>(true);
+	const [configData, setConfigData] = useState<ModalConfig | undefined>(undefined);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -32,8 +37,7 @@ export const App = () => {
 			setIsLarge(window.innerWidth >= 992);
 			setMediumBreakpoint(window.innerWidth >= 576);
 
-
-      setBreakpoint({
+			setBreakpoint({
 				sm: window.innerWidth >= 576,
 				md: window.innerWidth >= 768,
 				lg: window.innerWidth >= 992,
@@ -48,15 +52,22 @@ export const App = () => {
 		};
 	}, []);
 
+	useEffect(() => {
+		(async () => {
+			const configData = await getFirestoreData('1tu7lzQPMdDnGZCFv5IO');
+			setConfigData(configData);
+		})();
+	}, []);
+
 	const contextValues = {
 		isMobile,
 		isLarge,
 		mediumBreakpoint,
 		breakpoint,
 		setMenuShown,
+		showInfoModal,
+		setShowInfoModal,
 	};
-
-
 
 	return (
 		<AppContext.Provider value={contextValues}>
@@ -64,11 +75,12 @@ export const App = () => {
 			<HomeSection />
 			<AboutSection />
 			<WhySection />
-			<GallerySection/>
+			<GallerySection />
 			<ReviewsSection />
 			<ContactSection />
 			<Footer />
-			{menuShown && <Menu/>}
+			{menuShown && <Menu />}
+			{configData?.modalEnabled && showInfoModal && <InfoModal modalContent={configData?.modalContent}/>}
 			<ToastContainer />
 		</AppContext.Provider>
 	);
