@@ -74,7 +74,11 @@
 	}
 
 	&__locations {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
 		margin-top: 1.5em;
+		
 
 		.location {
 			padding: 0.5rem;

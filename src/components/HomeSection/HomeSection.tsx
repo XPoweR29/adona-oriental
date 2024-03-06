@@ -36,22 +36,22 @@ export const HomeSection = () => {
 					</div>
 
 					<div className={styles.home__locations}>
-						<div className={styles.location}>
+						<a className={styles.location} href='#contact'>
 							<FaLocationDot />
 							<span>Bielsko-Biała</span>
-						</div>
-						<div className={styles.location}>
+						</a>
+						<a className={styles.location} href='#contact'>
 							<FaLocationDot />
 							<span>Żywiec</span>
-						</div>
-						<div className={styles.location}>
+						</a>
+						<a className={styles.location} href='#contact'>
 							<FaLocationDot />
 							<span>Nowy Targ</span>
-						</div>
-						<div className={styles.location}>
+						</a>
+						<a className={styles.location} href='#contact'>
 							<FaLocationDot />
 							<span>Kęty</span>
-						</div>
+						</a>
 					</div>
 				</div>
 

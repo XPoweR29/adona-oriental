@@ -4,6 +4,7 @@ import { App } from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AdminInterface } from './components/AdminInterface/AdminInterface';
 import LoginPage from './components/LoginPage/LoginPage';
+import { NotFoundPage } from './components/NotFoundPage/NotFoundPage';
 
 
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
 	{
 		path: '/interface',
 		element: <AdminInterface />,
+	},
+	{
+		path: '*',
+		element: <NotFoundPage />,
 	},
 ]);
 

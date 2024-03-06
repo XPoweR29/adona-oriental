@@ -1,0 +1,36 @@
+@import '../../sass/mixins';
+
+.notFound {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+    min-width: 280px;
+	color: white;
+
+	.wrapper {
+		@include wrapper;
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		flex-direction: column;
+        padding-top: 6em;
+	}
+
+	img {
+		width: 80%;
+        max-width: 350px;
+	}
+
+    .text {
+        margin-top: 5em;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    a {
+        @include interfaceBtn;
+        margin-top: 5em;
+    }
+}
