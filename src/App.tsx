@@ -27,7 +27,7 @@ export const App = () => {
 	const [isLarge, setIsLarge] = useState<boolean>(window.innerWidth >= 992);
 	const [mediumBreakpoint, setMediumBreakpoint] = useState<boolean>(window.innerWidth >= 576);
 	const [menuShown, setMenuShown] = useState<boolean>(false);
-	const [showInfoModal, setShowInfoModal] = useState<boolean>(false);
+    const [showInfoModal, setShowInfoModal] = useState<boolean>(false);
 	const [configData, setConfigData] = useState<ModalConfig | undefined>(undefined);
 
 	useEffect(() => {
@@ -73,8 +73,8 @@ export const App = () => {
 		mediumBreakpoint,
 		breakpoint,
 		setMenuShown,
-		showInfoModal,
-		setShowInfoModal,
+		showInfoModal, 
+		setShowInfoModal
 	};
 
 	return (

@@ -10,17 +10,14 @@ import { useContext, useEffect } from 'react';
 import { AppContext } from '../Context/AppContext';
 
 export const Menu = () => {
-	const { setMenuShown } = useContext(AppContext)!;
+	const { setMenuShown, breakpoint } = useContext(AppContext)!;
 
 	useEffect(() => {
-		document.body.style.overflow = 'hidden';
-
+		if(breakpoint.md) document.body.style.overflow = 'hidden';
 		return () => {
 			document.body.style.overflow = 'visible';
 		};
 	});
-
-	console.log(window.innerHeight);
 
 	return (
 		<>

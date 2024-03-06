@@ -1,0 +1,39 @@
+@import '../../sass/mixins';
+@import '../../sass/colors';
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    gap: 1em;
+	padding: 2em;
+	margin-top: 4em;
+	background-color: $bg-color-light;
+	border-radius: 1em;
+
+	input {
+		width: 100%;
+		padding: 0.5em;
+		font-size: 1.6rem;
+	}
+
+    .btns {
+        display: flex;
+        gap: 1em;
+
+        button {
+            padding: 0.5em;
+            background-color: transparent;
+            color: whitesmoke;
+            border: 1px solid whitesmoke;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s;
+        
+            &:hover {
+                color: black;
+                background-color: whitesmoke;
+            }
+        }
+    }
+}

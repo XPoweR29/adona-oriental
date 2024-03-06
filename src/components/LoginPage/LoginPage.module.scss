@@ -1,0 +1,14 @@
+@import '../../sass/mixins';
+@import '../../sass/colors';
+
+.loginPage {
+	color: whitesmoke;
+
+	.wrapper {
+		@include wrapper;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
