@@ -1,9 +1,12 @@
 @import '../../sass/colors';
+@import '../../sass/animations';
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 
 .socialsBox {
 	display: flex;
+	position: relative;
 	gap: 1.5rem;
-	font-size: 2.6rem;
+	font-size: 3rem;
 
 	a {
 		scale: 1;
@@ -11,8 +14,7 @@
 		transition: scale 0.3s, color 0.3s;
 
 		&:hover {
-			scale: 1.1;
-			color: $main-color;
+			scale: 1.2;
 		}
 	}
 }

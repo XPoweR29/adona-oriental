@@ -48,7 +48,7 @@ export const AdminInterface = () => {
 
 	const saveChanges = async () => {
 		try {
-			await updateFirestoreData('1tu7lzQPMdDnGZCFv5IO', { modalContent, modalEnabled: showInfoModal });
+			await updateFirestoreData('1tu7lzQPMdDnGZCFv5IO', {modalContent, modalEnabled: showInfoModal});
 			setIsDataModified(false);
 			toast.success('Zmiany zostały zapisane', {
 				position: 'bottom-right',
@@ -59,7 +59,7 @@ export const AdminInterface = () => {
 		}
 	};
 
-	const handleContentChange = () => {
+	const handleContentChange = (modalContent: string) => {
 		setModalContent(modalContent);
 		setIsDataModified(true);
 	};
@@ -107,7 +107,7 @@ export const AdminInterface = () => {
 					<ReactQuill
 						className={styles.quill}
 						value={modalContent}
-						onChange={handleContentChange}
+						onChange={(modalContent)=>handleContentChange(modalContent)}
 						modules={modules}
 						placeholder='Wpisz treść powiadomienia...'
 					/>
