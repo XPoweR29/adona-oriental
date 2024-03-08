@@ -1,15 +1,18 @@
-import { formState } from '../../components/Form/Form';
+import { formState } from '../components/Form/Form';
 
-export const validateForm = (inputs: formState, setErrors: (val: Partial<formState>) => void) => {
+export const validateForm = (
+	inputs: formState,
+	setErrors: (val: Partial<formState>) => void
+) => {
 	const newErrors: { [key in keyof formState]?: string } = {};
 	const regName = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ\s']+$/;
 	const regNum = /^[0-9]+$/;
 
-	//checkName
+
 	if (inputs.name.trim().length < 3) {
 		newErrors.name = 'Imię musi zawierać conajmniej 3 znaki.';
 	}
-	
+
 	if (!inputs.name.trim()) {
 		newErrors.name = 'Musisz podać swoje imię.';
 	}
@@ -18,24 +21,22 @@ export const validateForm = (inputs: formState, setErrors: (val: Partial<formSta
 		newErrors.name = 'Imię nie może zawierać cyfr i znaków specjalnych. ';
 	}
 
-	//checkMail
+
 	if (!inputs.email.trim()) {
 		newErrors.email = 'Podaj swój adres mailowy.';
-	} 
+	}
 	if (!/\S+@\S+\.\S+/.test(inputs.email)) {
 		newErrors.email = 'Podany adres email jest nieprawidłowy.';
 	}
 
-	//checkPhone
-	if(inputs.phone && inputs.phone.length < 9) {
+	if (inputs.phone && inputs.phone.length < 9) {
 		newErrors.phone = 'Numer telefonu musi posiadać conajmniej 9 cyfr.';
 	}
-	if(inputs.phone && !regNum.test(inputs.phone)) {
+	if (inputs.phone && !regNum.test(inputs.phone)) {
 		newErrors.phone = 'Numer telefonu może składać się tylko z cyfr.';
 	}
 
 
-	//checkMessage
 	if (!inputs.message.trim()) {
 		newErrors.message = 'Pole "Wiadomość" jest wymagane.';
 	}

@@ -1,11 +1,10 @@
 import { useState, useRef } from 'react';
 import styles from './Form.module.scss';
 import { Icon } from '@iconify/react';
-import { validateForm } from '../../assets/utils/formValidation';
+import { validateForm } from '../../utils/formValidation';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
-import { config } from '../../constants/emailjs';
 
 export interface formState {
 	name: string;
@@ -17,8 +16,8 @@ export interface formState {
 const initialState: formState = {
 	name: '',
 	email: '',
-	phone: '', 
-	message: '', 
+	phone: '',
+	message: '',
 };
 
 export const Form = () => {
@@ -34,10 +33,10 @@ export const Form = () => {
 		if (validateForm(formState, setErrors)) {
 			emailjs
 				.sendForm(
-					config.SERVICE_ID,
-					config.TEMPLATE_ID,
+					import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+					import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
 					form.current!,
-					config.PUBLIC_KEY
+					import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
 				)
 				.then(
 					() => {
