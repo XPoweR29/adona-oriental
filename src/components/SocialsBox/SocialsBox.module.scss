@@ -5,7 +5,7 @@
 .socialsBox {
 	display: flex;
 	gap: 1.5rem;
-	font-size: 4rem;
+	font-size: 3.4rem;
 
 	a {
 		scale: 1;
@@ -15,11 +15,5 @@
 		&:hover {
 			scale: 1.2;
 		}
-	}
-}
-
-@media(min-width: 768px) {
-	.socialsBox {
-		font-size: 3.4rem;
 	}
 }

@@ -25,6 +25,9 @@ export const HomeSection = () => {
 	return (
 		<section className={styles.home} id='home'>
 			<div className={styles.wrapper}>
+
+				<div className={styles.testContainer}>
+
 				<h1 className={styles.home__title}>
 					Z nami odkryjesz orientalne smaki <span>Azji</span>
 				</h1>
@@ -58,6 +61,8 @@ export const HomeSection = () => {
 				{isMobile ? <SocialsBox className={styles.home__socials}/> 
 				: 
 				<button className={styles.home__menuBtn} onClick={()=>setMenuShown(true)}>Zobacz Menu</button>}
+				</div>
+
 
 				<a ref={cta} href='#about' className={styles.home__cta}>
 					<IoIosArrowDown />
