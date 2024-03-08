@@ -8,7 +8,6 @@ import menu from '../../assets/menu/menu.json';
 import { MenuItem } from '../MenuItem/MenuItem';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../Context/AppContext';
-
 export const Menu = () => {
 	const { setMenuShown, breakpoint } = useContext(AppContext)!;
 
@@ -22,9 +21,9 @@ export const Menu = () => {
 	return (
 		<>
 			<div className={styles.menu}>
-				<img className={styles.mosaicImg} src={mosaic} />
-				<img className={styles.frameImg} src={frame} />
-				<img className={styles.fansImg} src={fans} />
+				<img draggable='false' className={styles.mosaicImg} src={mosaic} />
+				<img draggable='false' className={styles.frameImg} src={frame} />
+				<img draggable='false' className={styles.fansImg} src={fans} />
 
 				<div className={styles.headingBar}>
 					<img className={styles.headingBar__logo} src={logo} />

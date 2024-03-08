@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import styles from './InfoModal.module.scss';
 import { AppContext } from '../Context/AppContext';
 import corner from '../../assets/img/corner_2.png';
-import roof from '../../assets/img/roof.png';
-import cookie from '../../assets/img/cookie.png';
+import roof from '../../assets/img/roof.webp';
+import cookie from '../../assets/img/cookie.webp';
 
 interface Props {
 	modalContent: string | undefined;

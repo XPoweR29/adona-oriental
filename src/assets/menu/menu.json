@@ -1,122 +1,752 @@
 [
-    {
-        "groupName": "Przystawki / Starter",
-        "items": [
-            {
-                "name": "Sajgonki",
-                "engName": "Spring rolls with Sajgon sauce",
-                "price": 16.50
-            },
-            {
-                "name": "Szczypce Krabowe",
-                "engName": "Crab with sesame",
-                "price": 10.50
-            },
-            {
-                "name": "Pierożki z krewetek",
-                "engName": "Dumplings with shrimp",
-                "price": 17.90
-            }
-        ]
-    },
-    {
-        "groupName": "Dania główne / Main dishes",
-        "items": [
-            {
-                "name": "Kaczka po pekińsku",
-                "engName": "Peking duck with plum sauce",
-                "price": 45.90
-            },
-            {
-                "name": "Kurczak teriyaki",
-                "engName": "Teriyaki chicken with vegetables",
-                "price": 28.75
-            },
-            {
-                "name": "Krewetki curry",
-                "engName": "Curry shrimp with coconut milk",
-                "price": 32.50
-            }
-        ]
-    },
-    {
-        "groupName": "Zupa specjalna / Soup",
-        "items": [
-            {
-                "name": "Rosół z makaronem sojowym",
-                "engName": "Broth with soja nudles",
-                "price": 9.30
-            },
-            {
-                "name": "Zupa Huntun",
-                "engName": "Soup Huntun",
-                "price": 9.90
-            },
-            {
-                "name": "Zupa z krabów",
-                "engName": "Soup Crab",
-                "price": 8.70
-            }
-        ]
-    },
-    {
-        "groupName": "Przystawki / Starter",
-        "items": [
-            {
-                "name": "Sajgonki",
-                "engName": "Spring rolls with Sajgon sauce",
-                "price": 16.50
-            },
-            {
-                "name": "Szczypce Krabowe",
-                "engName": "Crab with sesame",
-                "price": 10.50
-            },
-            {
-                "name": "Pierożki z krewetek",
-                "engName": "Dumplings with shrimp",
-                "price": 17.90
-            }
-        ]
-    },
-    {
-        "groupName": "Dania główne / Main dishes",
-        "items": [
-            {
-                "name": "Kaczka po pekińsku",
-                "engName": "Peking duck with plum sauce",
-                "price": 45.90
-            },
-            {
-                "name": "Kurczak teriyaki",
-                "engName": "Teriyaki chicken with vegetables",
-                "price": 28.75
-            },
-            {
-                "name": "Krewetki curry",
-                "engName": "Curry shrimp with coconut milk",
-                "price": 32.50
-            }
-        ]
-    },
-    {
-        "groupName": "Zupa specjalna / Soup",
-        "items": [
-            {
-                "name": "Rosół z makaronem sojowym",
-                "engName": "Broth with soja nudles",
-                "price": 9.30
-            },
-            {
-                "name": "Zupa Huntun",
-                "engName": "Soup Huntun",
-                "price": 9.90
-            },
-            {
-                "name": "Zupa z krabów",
-                "engName": "Soup Crab",
-                "price": 8.70
-            }
-        ]
-    }
+	{
+		"groupName": "Przystawki / Starter",
+		"items": [
+			{
+				"name": "Sajgonki (3szt.)",
+				"engName": "Spring rolls with Sajgon sauce",
+				"price": 17.5
+			},
+			{
+				"name": "Szczypce Krabowe",
+				"engName": "Crab with sesame",
+				"price": 11.5
+			},
+			{
+				"name": "Pierożki z krewetek",
+				"engName": "Dompling Hacao with shrimps",
+				"price": 18.9
+			},
+			{
+				"name": "Krewetki z sezamem",
+				"engName": "Shrimps with sezame 2 pieces",
+				"price": 19.9
+			}
+		]
+	},
+	{
+		"groupName": "Zupy / Soup",
+		"items": [
+			{
+				"name": "Rosół z makaronem sojowym",
+				"engName": "Broth with soja noodles",
+				"price": 9.9
+			},
+			{
+				"name": "Zupa Hun Tun",
+				"engName": "Soup Hun Tun",
+				"price": 10.5
+			},
+			{
+				"name": "Zupa z krabów",
+				"engName": "Soup Crab",
+				"price": 9.9
+			},
+			{
+				"name": "Zupa bambusowa",
+				"engName": "Soup Bamboo",
+				"price": 9.9
+			},
+			{
+				"name": "Zupa rybna pikantna",
+				"engName": "Piquant soup with fish",
+				"price": 10.3
+			},
+			{
+				"name": "Zupa kwaśno-pikantna",
+				"engName": "Soup piquant sour",
+				"price": 9.5
+			}
+		]
+	},
+	{
+		"groupName": "Drób / Poultry",
+		"items": [
+			{
+				"name": "Filet z kurczaka po chińsku",
+				"engName": "Chicken edlitk in china style",
+				"price": 27.3
+			},
+			{
+				"name": "Kurczak po Tajsku",
+				"engName": "Chicken in Thailand style",
+				"price": 27.9
+			},
+			{
+				"name": "Kurczak w sosie słodko-kwaśnym",
+				"engName": "Chicken in sauce sweet sour",
+				"price": 25.8
+			},
+			{
+				"name": "Kurczak w cieście kokosowym",
+				"engName": "Chicken in coconut pastry",
+				"price": 25.9
+			},
+			{
+				"name": "Kurczak z bambusem i grzybami",
+				"engName": "Chicken with bamboo and mushrooms",
+				"price": 27.2
+			},
+			{
+				"name": "Kurczak w pięciu smakach",
+				"engName": "Chicken with five flavour sauce",
+				"price": 26.8
+			},
+			{
+				"name": "Kurczak Nambo",
+				"engName": "Chicken Nambo style",
+				"price": 26.5
+			},
+			{
+				"name": "Kurczak w sosie curry",
+				"engName": "Chicken In curry sauce",
+				"price": 26.8
+			},
+			{
+				"name": "Kurczak z pieczarkami i kiełkami",
+				"engName": "Chicken with mushrooms",
+				"price": 26.7
+			},
+			{
+				"name": "Kurczak z warzywami",
+				"engName": "Chicken with vegatables",
+				"price": 26.7
+			},
+			{
+				"name": "Szaszłyk z kurczaka po wietnamsku",
+				"engName": "Loin of chicken in vietnam style",
+				"price": 27.2
+			},
+			{
+				"name": "Kurczak na ostro",
+				"engName": "Chicken piquant",
+				"price": 27.2
+			},
+			{
+				"name": "Kurczak z kukurydzą",
+				"engName": "Chicken with maize",
+				"price": 26.8
+			},
+			{
+				"name": "Kurczak z czosnkiem",
+				"engName": "Chicken with garlic",
+				"price": 27.9
+			},
+			{
+				"name": "Kurczak z brokułami",
+				"engName": "Chicken with greek cauliflower",
+				"price": 26.9
+			},
+			{
+				"name": "Kurczak Gonbao",
+				"engName": "Chicken Gonbao Style",
+				"price": 27.6
+			},
+			{
+				"name": "Kurczak w cieście sezamowym",
+				"engName": "Chicken in pastry with sesames",
+				"price": 26.9
+			},
+			{
+				"name": "Kurczak po Wietnamsku",
+				"engName": "Chicken in Vietnam style",
+				"price": 27.9
+			},
+			{
+				"name": "Kurczak w cieście sezamowym",
+				"engName": "Chicken Edith Chinese style",
+				"price": 26.9
+			},
+			{
+				"name": "Kurczak Hongcong",
+				"engName": "Chicken In Hongcong style",
+				"price": 27.5
+			},
+			{
+				"name": "Kurczak w cieście",
+				"engName": "Chicken in pastry",
+				"price": 25.9
+			}
+		]
+	},
+	{
+		"groupName": "Kaczka / Duck",
+		"items": [
+			{
+				"name": "Kaczka po Tokińsku",
+				"engName": "Duck in Toking style",
+				"price": 40.5
+			},
+			{
+				"name": "Kaczka z ananasem",
+				"engName": "Duck with pineapples",
+				"price": 40.1
+			},
+			{
+				"name": "Kaczka po Saigońsku",
+				"engName": "Duck in Saigon style",
+				"price": 40.9
+			},
+			{
+				"name": "Kaczka w sosie pikantnym",
+				"engName": "Duck in piquant sauce",
+				"price": 40.5
+			},
+			{
+				"name": "Kaczka z bambusem i grzybami na ostro",
+				"engName": "Duck with bamboo and mushrooms",
+				"price": 40.1
+			}
+		]
+	},
+	{
+		"groupName": "Wołowina / Beef",
+		"items": [
+			{
+				"name": "Wołowina z warzywami",
+				"engName": "Beef with vegatables",
+				"price": 31.9
+			},
+			{
+				"name": "Wołowina z brokułami",
+				"engName": "Beef with greek cauliflower",
+				"price": 31.7
+			},
+			{
+				"name": "Wołowina z bambusem i grzybami",
+				"engName": "Beef with bamboo and mushrooms",
+				"price": 32.9
+			},
+			{
+				"name": "Wołowina z ananasem",
+				"engName": "Beef with pineapples",
+				"price": 31.7
+			},
+			{
+				"name": "Wołowina z pieczarkami i kiełkami",
+				"engName": "Beef with mushrooms and bean sprouts",
+				"price": 31.5
+			},
+			{
+				"name": "Wołowina w sosie curry",
+				"engName": "Beef in curry sauce",
+				"price": 31.5
+			},
+			{
+				"name": "Wołowina smażona z fasolką i kiełkami",
+				"engName": "Beef with bean sprouts",
+				"price": 32.5
+			},
+			{
+				"name": "Wołowina z czosnkiem",
+				"engName": "Beef with garlic",
+				"price": 33.9
+			},
+			{
+				"name": "Wołowina w sosie pikantnym",
+				"engName": "Beef in piquant sauce",
+				"price": 33.9
+			},
+			{
+				"name": "Poledwica na gorącym półmisku",
+				"engName": "Beef - filet in hot plate",
+				"price": 42.9
+			},
+			{
+				"name": "Poledwica po Chińsku",
+				"engName": "Beef - Filet in Chinese style",
+				"price": 42.9
+			},
+			{
+				"name": "Poledwica z papryką i grzybami",
+				"engName": "Beef - Filet with mushrooms and red pepper",
+				"price": 42.9
+			}
+		]
+	},
+	{
+		"groupName": "Wieprzowina / Pork",
+		"items": [
+			{
+				"name": "Wieprzowina z fasolką i kiełkami",
+				"engName": "Pork with bean sprouts",
+				"price": 29.3
+			},
+			{
+				"name": "Wieprzowina z warzywami",
+				"engName": "Pork with vegatables",
+				"price": 29.5
+			},
+			{
+				"name": "Wieprzowina z bambusem i grzybami",
+				"engName": "Pork with bamboo and mushrooms",
+				"price": 29.9
+			},
+			{
+				"name": "Wieprzowina w sosie słodko-kwaśnym",
+				"engName": "Pork in piquant sauce",
+				"price": 29.5
+			},
+			{
+				"name": "Wieprzowina z orzechami",
+				"engName": "Pork with peanut",
+				"price": 29.9
+			},
+			{
+				"name": "Wieprzowina z czosnkiem",
+				"engName": "Pork with garlic",
+				"price": 30.5
+			},
+			{
+				"name": "Wieprzowina z sezamem",
+				"engName": "Pork with sesame",
+				"price": 29.8
+			},
+			{
+				"name": "Żeberka po Seczuańsku",
+				"engName": "Spareribs Szechuan style",
+				"price": 30.9
+			},
+			{
+				"name": "Szaszłyk po Wietnamsku",
+				"engName": "Loin of pork in Vietnam style",
+				"price": 30.0
+			},
+			{
+				"name": "Schab na gorącym półmisku",
+				"engName": "Loin of pork in hot plate",
+				"price": 29.7
+			},
+			{
+				"name": "Schab po Tajsku",
+				"engName": "Loin of pork in Thailand style",
+				"price": 30.5
+			}
+		]
+	},
+	{
+		"groupName": "Cielęcina / Veal",
+		"items": [
+			{
+				"name": "Cielęcina z pieczarkami i kiełkami",
+				"engName": "Veal with bean sprouts",
+				"price": 40.5
+			},
+			{
+				"name": "Cielęcina z bambusem i grzybami",
+				"engName": "Veal with bamboo and mushrooms",
+				"price": 40.9
+			},
+			{
+				"name": "Cielęcina w pięciu smakach",
+				"engName": "Veal in five flavour sauce",
+				"price": 40.5
+			},
+			{
+				"name": "Cielęcina po Tajsku",
+				"engName": "Veal in Thailand style",
+				"price": 40.9
+			},
+			{
+				"name": "Cielęcina po Wietnamsku",
+				"engName": "Veal in Vietnam style",
+				"price": 40.9
+			},
+			{
+				"name": "Cielęcina z brokułami",
+				"engName": "Veal with greek cauliflower",
+				"price": 40.5
+			}
+		]
+	},
+	{
+		"groupName": "Ryby / Fish",
+		"items": [
+			{
+				"name": "Ryba w sosie słodko-kwaśnym (filet z mintaja)",
+				"engName": "Fish in sour sauce",
+				"price": 26.8
+			},
+			{
+				"name": "Ryba w sosie pomidorowym (filet z mintaja)",
+				"engName": "Fish in sauce tomatoes",
+				"price": 26.8
+			},
+			{
+				"name": "Ryba w sosie curry (filet z mintaja)",
+				"engName": "Fish in curry sauce",
+				"price": 26.9
+			},
+			{
+				"name": "Ryba po Chińsku (filet z mintaja)",
+				"engName": "Fish in Chinese style",
+				"price": 30.9
+			},
+			{
+				"name": "Ryba po Japońsku (filet z mintaja)",
+				"engName": "Fish in Japan style",
+				"price": 30.9
+			},
+			{
+				"name": "Ryba w pięciu smakach (filet z mintaja)",
+				"engName": "Fish five flavour sauce",
+				"price": 26.9
+			},
+			{
+				"name": "Łosoś pikantny",
+				"engName": "Salmon piquant",
+				"price": 42.9
+			},
+			{
+				"name": "Łosoś ADONA",
+				"engName": "Salmon ADONA style",
+				"price": 42.9
+			},
+			{
+				"name": "Pstrąg chrupiący",
+				"engName": "Crispy trout",
+				"price": 32.9
+			}
+		]
+	},
+	{
+		"groupName": "Inne Dania / Others",
+		"items": [
+			{
+				"name": "Warzywa smażone",
+				"engName": "Vegetables",
+				"price": 20.9
+			},
+			{
+				"name": "Warzywa w sosie słodko-kwaśnym",
+				"engName": "Vegetables in sour sauce",
+				"price": 20.9
+			},
+			{
+				"name": "Bambus z grzybami",
+				"engName": "Bamboo with mushroom",
+				"price": 20.9
+			},
+			{
+				"name": "Brokuły z czosnkiem",
+				"engName": "Greek cauliflower with garlic",
+				"price": 20.9
+			},
+			{
+				"name": "Ryż z warzywami",
+				"engName": "Rice with vegetables",
+				"price": 22.9
+			},
+			{
+				"name": "Ryż z kurczakiem",
+				"engName": "Rice with chicken",
+				"price": 25.9
+			},
+			{
+				"name": "Ryż z krewetkami",
+				"engName": "Rice with shrimps",
+				"price": 31.9
+			},
+			{
+				"name": "Makaron z warzywami",
+				"engName": "Vermicelli with vegetables",
+				"price": 26.9
+			},
+			{
+				"name": "Makaron z kurczakiem",
+				"engName": "Vermicelli with chicken",
+				"price": 27.9
+			},
+			{
+				"name": "Makaron z wołowiną",
+				"engName": "Vermicelli with beef",
+				"price": 28.9
+			},
+			{
+				"name": "Makaron z krewetkami",
+				"engName": "Vermicelli with shrimps",
+				"price": 32.9
+			},
+			{
+				"name": "Makaron z wieprzowiną",
+				"engName": "Vermicelli with pork",
+				"price": 28.9
+			},
+			{
+				"name": "Sałatka z warzyw mieszanych",
+				"engName": "Vegetable salad mixed",
+				"price": 9.5
+			},
+			{
+				"name": "Ryż biały",
+				"engName": "White rice",
+				"price": 6.0
+			},
+			{
+				"name": "Frytki",
+				"engName": "Chips",
+				"price": 6.9
+			},
+			{
+				"name": "Makaron sojowy",
+				"engName": "Soybean noodles",
+				"price": 6.5
+			}
+		]
+	},
+	{
+		"groupName": "Owoce morza - Frutti di Mare",
+		"items": [
+			{
+				"name": "Kalmary po Japońsku",
+				"engName": "Squid in Japan style",
+				"price": 33.9
+			},
+			{
+				"name": "Kalmary chrupiące",
+				"engName": "Squid crunch fish",
+				"price": 30.5
+			},
+			{
+				"name": "Kalmary z bambusem i kiełkami",
+				"engName": "Squid with bamboo and bean sprouts",
+				"price": 32.7
+			},
+			{
+				"name": "Owoce morza bambusem i grzybami",
+				"engName": "Fruit de mer with bamboo and mushrooms",
+				"price": 32.5
+			},
+			{
+				"name": "Owoce na gorącym półmisku",
+				"engName": "Fruit more in hot plate",
+				"price": 32.9
+			},
+			{
+				"name": "Owoce morza chrupiące",
+				"engName": "Fruit more",
+				"price": 29.9
+			},
+			{
+				"name": "Krewetki w sosie pikantnym",
+				"engName": "Shrimps in piquant sauce",
+				"price": 33.9
+			},
+			{
+				"name": "Krewetki panierowane (cena za 1 szt)",
+				"engName": "Shrimps in pastry",
+				"price": 9.5
+			},
+			{
+				"name": "Krewetki po Saigońsku (cena za 1 szt)",
+				"engName": "Shrimps Saigon style",
+				"price": 9.5
+			},
+			{
+				"name": "Krewetki na maśle (6 szt.)",
+				"engName": "Shrimps on the butter",
+				"price": 54.0
+			}
+		]
+	},
+	{
+		"groupName": "Desery / Dessert",
+		"items": [
+			{
+				"name": "Banan w cieście kokosowym",
+				"engName": "Banana in coconut pastry",
+				"price": 8.5
+			},
+			{
+				"name": "Banan płonący",
+				"engName": "Banana in fire",
+				"price": 10.5
+			},
+			{
+				"name": "Deser ADONA",
+				"engName": "ADONA dessert",
+				"price": 14.9
+			},
+			{
+				"name": "Lody czekoladowe",
+				"engName": "Chocolate ice cream",
+				"price": 10.9
+			},
+			{
+				"name": "Lody waniliowe",
+				"engName": "Valli ice cream",
+				"price": 10.9
+			},
+			{
+				"name": "Lody truskawkowe",
+				"engName": "Strawberry ice cream",
+				"price": 10.9
+			},
+			{
+				"name": "Lody z owocami",
+				"engName": "Ice cream with fruit",
+				"price": 14.8
+			}
+		]
+	},
+	{
+		"groupName": "napoje gorące / Hot drinks",
+		"items": [
+			{
+				"name": "Kawa rozpuszczalna",
+				"engName": "Instant coffee",
+				"price": 7.5
+			},
+			{
+				"name": "Kawa parzona",
+				"engName": "Brewed coffee",
+				"price": 6.0
+			},
+			{
+				"name": "Kawa cappuccino",
+				"engName": "Cappuccino coffee",
+				"price": 7.5
+			},
+			{
+				"name": "Herbata Dilmah",
+				"engName": "Dilmah tea",
+				"price": 7.5
+			},
+			{
+				"name": "Herbata zielona",
+				"engName": "Green tea",
+				"price": 8.5
+			}
+		]
+	},
+	{
+		"groupName": "Napoje Zimne / Cold Drinks",
+		"items": [
+			{
+				"name": "Sok owocowy Tarczyn (250ml)",
+				"engName": "Tarczyn fruit juice",
+				"price": 7.5
+			},
+			{
+				"name": "Sok pomidorowy (250 ml)",
+				"engName": "Tomato Juice",
+				"price": 7.5
+			},
+			{
+				"name": "Woda mineralna (250 ml)",
+				"engName": "Mineral Water",
+				"price": 6.0
+			},
+			{
+				"name": "Pepsi (250 ml)",
+				"engName": "Draft Pepsi",
+				"price": 7.5
+			},
+			{
+				"name": "Ice tea (500ml)",
+				"engName": "Ice tea",
+				"price": 9.0
+			},
+			{
+				"name": "7up / Pepsi / Mirinda (500ml)",
+				"engName": "7up / Pepsi / Mirinda",
+				"price": 8.0
+			},
+			{
+				"name": "Sok Toma",
+				"engName": "Toma Juice",
+				"price": 7.7
+			}
+		]
+	},
+	{
+		"groupName": "Piwo / Beer",
+		"items": [
+			{
+				"name": "Warka jasna (300 ml)",
+				"engName": "Warka light",
+				"price": 9.5
+			},
+			{
+				"name": "Warka jasna (500 ml)",
+				"engName": "Warka light",
+				"price": 11.5
+			},
+			{
+				"name": "Żywiec (300 ml)",
+				"engName": "Żywiec",
+				"price": 9.5
+			},
+			{
+				"name": "Żywiec (500 ml)",
+				"engName": "Żywiec",
+				"price": 12.5
+			},
+			{
+				"name": "Warka Strong (500 ml)",
+				"engName": "Warka Strong",
+				"price": 12.5
+			},
+			{
+				"name": "Heineken (500 ml)",
+				"engName": "Heineken",
+				"price": 12.5
+			},
+			{
+				"name": "Sok do piwa",
+				"engName": "Beer juice",
+				"price": 1.5
+			}
+		]
+	},
+	{
+		"groupName": "Wino / Wine",
+		"items": [
+			{
+				"name": "Sofia (białe, czerwone) 100 ml",
+				"engName": "Sofia (white, red) 100 ml",
+				"price": 8.5
+			},
+			{
+				"name": "Cheteau (białe, czerwone) 100 ml",
+				"engName": "Cheteau (white, red) 100 ml",
+				"price": 8.5
+			},
+			{
+				"name": "Bordeaux (100 ml)",
+				"engName": "Bordeaux (100 ml)",
+				"price": 8.5
+			},
+			{
+				"name": "Martini (białe, czerwone) 100 ml",
+				"engName": "Martini (white, red) 100 ml",
+				"price": 10.5
+			},
+			{
+				"name": "Cambras (białe, czerwone) 100 ml",
+				"engName": "Cambras (white, red) 100 ml",
+				"price": 8.5
+			},
+			{
+				"name": "Wino grzane (200 ml)",
+				"engName": "Mulled wine (200 ml)",
+				"price": 12.5
+			}
+		]
+	},
+	{
+		"groupName": "Szampan / Champagne",
+		"items": [
+			{
+				"name": "Galo Andre (butelka)",
+				"engName": "Galo Andre (bottle)",
+				"price": 35.0
+			},
+			{
+				"name": "Grancizano (butelka)",
+				"engName": "Grancizano (bottle)",
+				"price": 48.0
+			}
+		]
+	}
 ]

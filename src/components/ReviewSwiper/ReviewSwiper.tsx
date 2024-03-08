@@ -10,6 +10,7 @@ import 'swiper/css/autoplay';
 import styles from './ReviewSwiper.module.scss';
 import { useContext } from 'react';
 import { AppContext } from '../Context/AppContext';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 interface Review {
 	nickname: string;
@@ -35,6 +36,7 @@ export const ReviewSwiper: React.FC = () => {
 					<h4 className={styles.card__user}>{rev.nickname}</h4>
 
 					<div className={styles.card__rating}>
+						<Icon icon='flat-color-icons:google' className={styles.googleIcon}/>
 						{Array.from({ length: rev.rate }, (_, i) => (
 							<AiFillStar key={i} />
 						))}
