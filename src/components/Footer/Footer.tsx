@@ -1,11 +1,13 @@
 import styles from './Footer.module.scss';
 import logo from '../../assets/img/logo.png';
 import { FaFacebookSquare } from 'react-icons/fa';
+import dev_logo from '../../assets/img/dev_logo.svg';
 
 export const Footer = () => {
-    return (
-			<footer className={styles.footer} id='footer'>
-				<div className={styles.wrapper}>
+	return (
+		<footer className={styles.footer} id='footer'>
+			<div className={styles.wrapper}>
+				<div className={styles.major}>
 					<div className={styles.footer__logo}>
 						<a href='#'>
 							<img src={logo} />
@@ -41,6 +43,14 @@ export const Footer = () => {
 						</a>
 					</div>
 				</div>
-			</footer>
-		);
-}
+
+				<div className={styles.footer__signature}>
+					<p>Designed & Developed by</p>
+					<a href='https://webcraft-studio.pl/' target='_blank' rel='noopener noreferrer'>
+						<img src={dev_logo} />
+					</a>
+				</div>
+			</div>
+		</footer>
+	);
+};

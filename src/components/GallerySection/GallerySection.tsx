@@ -44,9 +44,8 @@ export const GallerySection = () => {
                 </div>
                 <img src={mosaic} className={styles.mosaic} />
             </div>
-
+            
             {previewShown && clickedImg && <Preview clickedImg={clickedImg} images={images} setPreviewShown={setPreviewShown}/>}
-
         </section>
     );
 };
