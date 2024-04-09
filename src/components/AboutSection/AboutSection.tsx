@@ -12,12 +12,12 @@ export const AboutSection = () => {
 	return (
 		<section className={styles.about} id='about'>
 			<div className={styles.wrapper}>
-				<img src={bgSectionMosaic} className={styles.bgMosaic_one} />
-				<img src={bgSectionMosaic} className={styles.bgMosaic_two} />
-				{mediumBreakpoint && (<img src={bgSectionImg_one} className={styles.sectionImg_one} />)}
+				<img src={bgSectionMosaic} draggable='false' className={styles.bgMosaic_one} />
+				<img src={bgSectionMosaic} draggable='false' className={styles.bgMosaic_two} />
+				{mediumBreakpoint && (<img src={bgSectionImg_one} draggable='false' className={styles.sectionImg_one} />)}
 				
 				<div className={styles.about__box}>
-					{!isMobile && <img src={aboutImg} className={styles.about__img} />}
+					{!isMobile && <img src={aboutImg} draggable='false' className={styles.about__img} />}
 
 					<div className={styles.about__content}>
 						<h2 className={styles.title}>O nas</h2>
@@ -38,12 +38,12 @@ export const AboutSection = () => {
 						</p>
 
 						{!mediumBreakpoint && (
-							<img src={bgSectionImg_one} className={styles.sectionImg_one} />
+							<img src={bgSectionImg_one} draggable='false' className={styles.sectionImg_one} />
 						)}
 					</div>
 
 					{mediumBreakpoint && (
-						<img src={bgSectionImg_two} className={styles.sectionImg_two} />
+						<img src={bgSectionImg_two} draggable='false' className={styles.sectionImg_two} />
 					)}
 				</div>
 			</div>

@@ -20,9 +20,14 @@
 	.wrapper {
 		@include wrapper;
 		display: flex;
-		justify-content: space-around;
-		align-items: center;
+		flex-direction: column;
 		max-width: 720px !important;
+	}
+
+	.major {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 	}
 
 	&__logo {
@@ -45,6 +50,24 @@
 			}
 		}
 	}
+
+	&__signature {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 0.4em;
+		margin-top: 2em;
+		opacity: 0.2;
+
+		img {
+			width: 70px;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -52,6 +75,10 @@
 		&__social {
 			flex-direction: row;
 			gap: 2em;
+		}
+
+		&__signature {
+			margin-top: 0.5em;
 		}
 	}
 }

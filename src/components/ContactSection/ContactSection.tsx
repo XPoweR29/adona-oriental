@@ -15,16 +15,16 @@ export const ContactSection = () => {
 		<section className={styles.contact} id='contact'>
 			{breakpoint.xxl ? null : (
 				<>
-					<img src={lanterns} className={styles.sectionImg_lanterns} />
-					<img src={mosaic} className={styles.sectionImg_mosaic} />
+					<img src={lanterns} draggable='false' className={styles.sectionImg_lanterns} />
+					<img src={mosaic} draggable='false' className={styles.sectionImg_mosaic} />
 				</>
 			)}
 
 			<div className={styles.wrapper}>
 				{breakpoint.xxl && (
 					<>
-						<img src={lanterns} className={styles.sectionImg_lanterns} />
-						<img src={mosaic} className={styles.sectionImg_mosaic} />
+						<img src={lanterns} draggable='false' className={styles.sectionImg_lanterns} />
+						<img src={mosaic} draggable='false' className={styles.sectionImg_mosaic} />
 					</>
 				)}
 
