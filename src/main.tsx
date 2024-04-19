@@ -1,10 +1,9 @@
 import ReactDOM from 'react-dom/client';
 import './main.scss';
 import { App } from './App';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { AdminInterface } from './components/AdminInterface/AdminInterface';
 import LoginPage from './components/LoginPage/LoginPage';
-import { NotFoundPage } from './components/NotFoundPage/NotFoundPage';
 
 
 
@@ -23,7 +22,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '*',
-		element: <NotFoundPage />,
+		element: <Navigate to="/"/>,
 	},
 ]);
 
