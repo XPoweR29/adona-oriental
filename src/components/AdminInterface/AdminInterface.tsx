@@ -1,22 +1,27 @@
-import styles from './AdminInterface.module.scss';
-import 'react-quill/dist/quill.snow.css';
-import { User, onAuthStateChanged, signOut } from 'firebase/auth';
-import ReactQuill from 'react-quill';
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { auth } from '../../../firebase.config';
-import { ModalConfig, getFirestoreData } from '../../utils/getFirestoreData';
-import { ToggleSwitch } from '../ToggleSwitch/ToggleSwitch';
-import { Icon } from '@iconify/react/dist/iconify.js';
-import { updateFirestoreData } from '../../utils/updateFirebaseData';
-import { toast, ToastContainer } from 'react-toastify';
-import { Loader } from '../Loader/Loader';
+import styles from "./AdminInterface.module.scss";
+import "react-quill/dist/quill.snow.css";
+import { User, onAuthStateChanged, signOut } from "firebase/auth";
+import ReactQuill from "react-quill";
+import { useState, useEffect } from "react";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { auth } from "../../../firebase.config";
+import { ModalConfig, getFirestoreData } from "../../utils/getFirestoreData";
+import { ToggleSwitch } from "../ToggleSwitch/ToggleSwitch";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { updateFirestoreData } from "../../utils/updateFirebaseData";
+import { toast, ToastContainer } from "react-toastify";
+import { Loader } from "../Loader/Loader";
 
 export const AdminInterface = () => {
 	const navigate = useNavigate();
+	const location = useLocation();
 	const [authUser, setAuthUser] = useState<User | null>(null);
-	const [modalContent, setModalContent] = useState<string | undefined>(undefined);
-	const [showInfoModal, setShowInfoModal] = useState<boolean | undefined>(undefined);
+	const [modalContent, setModalContent] = useState<string | undefined>(
+		undefined
+	);
+	const [showInfoModal, setShowInfoModal] = useState<boolean | undefined>(
+		undefined
+	);
 	const [isDataModified, setIsDataModified] = useState(false);
 
 	useEffect(() => {
@@ -25,7 +30,7 @@ export const AdminInterface = () => {
 				setAuthUser(user);
 			} else {
 				setAuthUser(null);
-				navigate('/');
+				navigate("/");
 			}
 		});
 
@@ -37,25 +42,30 @@ export const AdminInterface = () => {
 
 	useEffect(() => {
 		(async () => {
-			const configData: ModalConfig | undefined = await getFirestoreData(
-				'1tu7lzQPMdDnGZCFv5IO'
-			);
-			setModalContent(configData?.modalContent || '');
-			setShowInfoModal(configData?.modalEnabled);
-			console.log('Pobieram dane...');
+			if (authUser) {
+				const configData: ModalConfig | undefined = await getFirestoreData(
+					"1tu7lzQPMdDnGZCFv5IO"
+				);
+				setModalContent(configData?.modalContent || "");
+				setShowInfoModal(configData?.modalEnabled);
+				console.log("Pobieram dane...");
+			}
 		})();
-	}, []);
+	}, [authUser]);
 
 	const saveChanges = async () => {
 		try {
-			await updateFirestoreData('1tu7lzQPMdDnGZCFv5IO', {modalContent, modalEnabled: showInfoModal});
+			await updateFirestoreData("1tu7lzQPMdDnGZCFv5IO", {
+				modalContent,
+				modalEnabled: showInfoModal,
+			});
 			setIsDataModified(false);
-			toast.success('Zmiany zostały zapisane', {
-				position: 'bottom-right',
-				theme: 'colored',
+			toast.success("Zmiany zostały zapisane", {
+				position: "bottom-right",
+				theme: "colored",
 			});
 		} catch (err) {
-			toast.error('Wystąpił błąd, spróbój później');
+			toast.error("Wystąpił błąd, spróbój później");
 		}
 	};
 
@@ -65,8 +75,12 @@ export const AdminInterface = () => {
 	};
 
 	const handleLogOut = () => {
-		const logoutConfirm = !isDataModified || window.confirm('Masz niepzaisane zmiany. Czy napewno chcesz się wylogować?');
-		if(logoutConfirm){
+		const logoutConfirm =
+			!isDataModified ||
+			window.confirm(
+				"Masz niepzaisane zmiany. Czy napewno chcesz się wylogować?"
+			);
+		if (logoutConfirm) {
 			signOut(auth);
 		}
 	};
@@ -75,15 +89,15 @@ export const AdminInterface = () => {
 		toolbar: [
 			[{ header: [1, 2, 3, false] }],
 			[{ color: [] }],
-			['bold', 'italic', 'underline', 'strike', 'blockquote'],
+			["bold", "italic", "underline", "strike", "blockquote"],
 			[
-				{ list: 'ordered' },
-				{ list: 'bullet' },
-				{ indent: '-1' },
-				{ indent: '+1' },
+				{ list: "ordered" },
+				{ list: "bullet" },
+				{ indent: "-1" },
+				{ indent: "+1" },
 			],
-			['link'],
-			['clean'],
+			["link"],
+			["clean"],
 		],
 	};
 
@@ -92,13 +106,13 @@ export const AdminInterface = () => {
 			{authUser && modalContent ? (
 				<div className={styles.wrapper}>
 					<button className={styles.logOutBtn} onClick={handleLogOut}>
-						<Icon icon='basil:logout-solid' />
+						<Icon icon="basil:logout-solid" />
 						Wyloguj
 					</button>
 					<div className={styles.option}>
 						<p className={styles.txt}>Okno powiadomienia:</p>
 						<ToggleSwitch
-							id='switch1'
+							id="switch1"
 							currnetState={showInfoModal}
 							switchState={setShowInfoModal}
 							modified={setIsDataModified}
@@ -107,16 +121,26 @@ export const AdminInterface = () => {
 					<ReactQuill
 						className={styles.quill}
 						value={modalContent}
-						onChange={(modalContent)=>handleContentChange(modalContent)}
+						onChange={(modalContent) => handleContentChange(modalContent)}
 						modules={modules}
-						placeholder='Wpisz treść powiadomienia...'
+						placeholder="Wpisz treść powiadomienia..."
 					/>
-					<button className={styles.saveBtn} onClick={saveChanges}>Zapisz</button>
+					<button className={styles.saveBtn} onClick={saveChanges}>
+						Zapisz
+					</button>
+					
+					{location.pathname !== "/interface/menu-manager" && (
+						<Link to="/interface/menu-manager" className={styles.editMenuBtn}>
+							Edytuj MENU
+						</Link>
+					)}
+					<Outlet />
 
 					<ToastContainer />
-				</div>) 
-				:
-				<Loader />}
+				</div>
+			) : (
+				<Loader />
+			)}
 		</>
 	);
 };

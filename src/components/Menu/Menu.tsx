@@ -4,19 +4,28 @@ import mosaic from '../../assets/img/menu_mosaic.png';
 import fans from '../../assets/img/fans.png';
 import frame from '../../assets/img/menu_frame.png';
 import { IoMdClose } from 'react-icons/io';
-import menu from '../../assets/menu/menu.json';
+// import menu from '../../assets/menu/menu.json';
 import { MenuItem } from '../MenuItem/MenuItem';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../Context/AppContext';
+import { useMenuManager } from '../../hooks/useMenuManager';
+import { Spinner } from '../Spinner/Spinner';
 export const Menu = () => {
-	const { setMenuShown, breakpoint } = useContext(AppContext)!;
+	const { setMenuShown, breakpoint, menu, loading } = useContext(AppContext)!;
+	const {refreshMenuList} = useMenuManager();
 
 	useEffect(() => {
 		if(breakpoint.md) document.body.style.overflow = 'hidden';
 		return () => {
 			document.body.style.overflow = 'visible';
 		};
-	});
+	}, [breakpoint.md]);
+
+	useEffect(() => {
+		(async () => {
+			await refreshMenuList();
+		})();
+	}, []);
 
 	return (
 		<>
@@ -35,23 +44,25 @@ export const Menu = () => {
 					</button>
 				</div>
 
-				<div className={styles.content}>
-					{menu.map((menu, i) => (
-						<div className={styles.group} key={i}>
-							<h3 className={styles.group__title}>{menu.groupName}</h3>
+				{loading ? <Spinner/>:
+
+				(<div className={styles.content}>
+					{menu.map((group) => (
+						<div className={styles.group} key={group.id}>
+							<h3 className={styles.group__title}>{group.name}</h3>
 							<ul className={styles.group__list}>
-								{menu.items.map(({ name, engName, price }, i) => (
+								{group.dishes.map(({ name, engName, price, id }) => (
 									<MenuItem
 										name={name}
 										engName={engName}
-										price={price}
-										key={i}
+										price={Number(price)}
+										key={id}
 									/>
 								))}
 							</ul>
 						</div>
 					))}
-				</div>
+				</div>)}
 			</div>
 			<div className={styles.menuBg}></div>
 		</>

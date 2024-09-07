@@ -1,0 +1,52 @@
+@import "../../sass/mixins";
+
+.container {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 100;
+}
+
+.editor {
+	border: 1px solid white;
+	background-color: black;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    width: 450px;
+
+    gap: 1.5em;
+}
+
+.inputContainer {
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+
+	input {
+        margin-left: auto;
+		padding: 0.2em;
+		font-size: 1em;
+		background-color: transparent;
+		color: white;
+		border: 1px solid white;
+	}
+}
+
+.btnsContainer {
+    display: flex;
+    gap: 3em;
+    margin: 0 auto;
+    margin-top: 2em;
+    
+    button {
+        @include interfaceBtn;
+    }
+}

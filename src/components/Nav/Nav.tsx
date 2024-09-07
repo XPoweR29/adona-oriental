@@ -1,11 +1,11 @@
 import styles from './Nav.module.scss';
 import { useContext, useEffect, useState } from 'react';
 import logo from '../../assets/img/logo.png';
-import { AppContext } from '../Context/AppContext';
 import { BurgerBtn } from '../BurgerBtn/BurgerBtn';
 import { NavBar } from '../NavBar/NavBar';
 import { SocialsBox } from '../SocialsBox/SocialsBox';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
+import { AppContext } from '../Context/AppContext';
 
 export const Nav = () => {
 	const { isMobile } = useContext(AppContext)!;

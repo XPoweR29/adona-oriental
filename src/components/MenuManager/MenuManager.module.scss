@@ -1,0 +1,49 @@
+@import "../../sass/mixins";
+@import "../../sass/colors";
+
+.wrapper {
+	@include wrapper;
+	margin-top: 2em;
+	padding: 1em 0;
+	font-size: 1.2rem;
+	color: white;
+	border-top: 1px dashed $main-color;
+
+	.addGroupBtn {
+		@include interfaceBtn;
+		font-size: 1em;
+		margin: 2em auto;
+		margin-top: 0.5em;
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1em;
+		padding: 0.5em;
+	}
+
+	.loaderBg {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 100;
+	}
+}
+
+@media(width > 350px) {
+	.wrapper {
+		font-size: 1.4rem;
+	}
+}
+
+@media(width > 576px) {
+	.wrapper {
+		font-size: 1.6rem;
+	}
+	
+}
