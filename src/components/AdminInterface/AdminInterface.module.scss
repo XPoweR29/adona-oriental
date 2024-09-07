@@ -30,6 +30,11 @@
 	.saveBtn {
 		@include interfaceBtn;
 	}
+
+	.editMenuBtn {
+		@include interfaceBtn;
+		margin-top: 5em;
+	}
 }
 
 @media (min-width: 768px) {
